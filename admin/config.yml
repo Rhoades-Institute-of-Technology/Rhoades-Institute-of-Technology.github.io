@@ -2,8 +2,7 @@ backend:
   name: github
   repo: joffie87/rit-site
   branch: main
-  auth_type: pkce
-  app_id: Ov23lih3C9jpviuA9uel
+  base_url: https://sveltia-cms-auth.rit-ptaa.workers.dev
 
 media_library:
   name: cloudinary
