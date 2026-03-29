@@ -1,0 +1,71 @@
+backend:
+  name: github
+  repo: joffie87/rit-site
+  branch: main
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: diepkxvif
+    api_key: 763915771293399
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string }
+      - { name: date, label: Date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { name: author, label: Author, widget: string, default: "Johnathon Rhoades" }
+      - { name: excerpt, label: Excerpt, widget: text }
+      - { name: tags, label: Tags, widget: list, field: { name: tag, widget: string } }
+      - { name: featured_image, label: Featured Image, widget: string, hint: "Cloudinary public ID (e.g. rit-site/blog/my-image)" }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: artists
+    label: Artists
+    file: src/lib/data/artists.json
+    fields:
+      - name: artists
+        label: Artists
+        widget: list
+        fields:
+          - { name: slug, label: Slug, widget: string }
+          - { name: name, label: Name, widget: string }
+          - { name: role, label: Role, widget: string }
+          - { name: description, label: Description, widget: text }
+          - { name: avatar, label: Avatar, widget: string, required: false, hint: "Cloudinary public ID" }
+          - name: links
+            label: Links
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: url, label: URL, widget: string }
+          - name: gallery
+            label: Gallery
+            widget: list
+            fields:
+              - { name: src, label: Image, widget: string, hint: "Cloudinary public ID" }
+              - { name: alt, label: Alt Text, widget: string }
+              - { name: caption, label: Caption, widget: string, required: false }
+
+  - name: hub
+    label: Hub Settings
+    file: src/lib/data/hub-config.json
+    fields:
+      - { name: about, label: Hub About Text, widget: text }
+      - { name: discord_url, label: Discord Invite URL, widget: string }
+      - name: projects
+        label: Projects
+        widget: list
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: description, label: Description, widget: text }
+          - { name: url, label: URL, widget: string }
+          - name: tags
+            label: Tags
+            widget: list
+            field: { name: tag, widget: string }
