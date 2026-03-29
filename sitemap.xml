@@ -3,7 +3,7 @@
   <url>
     <loc>https://rhoades-institute-of-technology.github.io/</loc>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://rhoades-institute-of-technology.github.io/about</loc>
@@ -24,31 +24,6 @@
     <loc>https://rhoades-institute-of-technology.github.io/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://rhoades-institute-of-technology.github.io/blog/wisconsin-incorporated</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://rhoades-institute-of-technology.github.io/blog/12-core-values</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://rhoades-institute-of-technology.github.io/blog/gamesgiving-first-community-event</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://rhoades-institute-of-technology.github.io/blog/sors-making-invisible-labor-visible</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://rhoades-institute-of-technology.github.io/blog/one-year-in</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://rhoades-institute-of-technology.github.io/donate</loc>
@@ -84,5 +59,30 @@
     <loc>https://rhoades-institute-of-technology.github.io/legal</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://rhoades-institute-of-technology.github.io/blog/wisconsin-incorporated</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://rhoades-institute-of-technology.github.io/blog/12-core-values</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://rhoades-institute-of-technology.github.io/blog/gamesgiving-first-community-event</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://rhoades-institute-of-technology.github.io/blog/sors-making-invisible-labor-visible</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://rhoades-institute-of-technology.github.io/blog/one-year-in</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
