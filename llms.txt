@@ -34,17 +34,21 @@ The Rhoades Institute of Technology is a Wisconsin nonprofit building tools and 
 
 ## Projects
 
+### TVN Bridge
+Status: Alpha
+A local-first AI governance platform that enforces constraints AI cannot bypass. Sovereign Firewall, Context Gate, Truth Nodes, and universal audit trails — with zero telemetry. The backbone of RIT's technology ecosystem.
+
+### TVN Vault
+Status: Alpha
+An encrypted local workspace — notes, databases, and double-entry accounting with SQLCipher encryption. No cloud, no telemetry. Your passphrase is the only key.
+
 ### No Solos Alpha
 Status: In Development
 A cooperative multiplayer game built around one rule: no solo play. Every mechanic requires teamwork, communication, and shared strategy. Designed as both entertainment and a proof of concept for collaborative problem-solving.
 
 ### PTAA
 Status: Draft Framework
-The Political Transparency and Accountability Act — a model legislative framework requiring real-time PAC donor disclosure, banning anonymous pass-through contributions, and establishing a Citizen Oversight Corps for public auditing of political finance. Grounded in 82% public support for campaign finance transparency.
-
-### TVN Bridge
-Status: Patent Pending
-An AI trust and verification infrastructure project currently in development. Details are limited while intellectual property protections are being finalized.
+The Political Transparency and Accountability Act — a model legislative framework requiring real-time PAC donor disclosure, banning anonymous pass-through contributions, and establishing a Citizen Oversight Corps for public auditing of political finance.
 
 ### SORS
 Status: Active
@@ -56,15 +60,11 @@ A hardware companion to SORS — physical markers and sensor systems that suppor
 
 ### Wayfinder
 Status: In Development
-AI-guided learning layers for open-source creative tools like Godot, GIMP, and Blender. Inspired by gaming overlays like Deadly Boss Mods — Wayfinder highlights the next action in real-time, gives context on why, and waits for the human to execute. Guided mastery, not automation. The Godot editor plugin is the most developed implementation, with a working step engine, UI highlighting, and instruction system.
+AI-guided learning layers for open-source creative tools like Godot, GIMP, and Blender. Inspired by gaming overlays like Deadly Boss Mods — Wayfinder highlights the next action in real-time, gives context on why, and waits for the human to execute. Guided mastery, not automation.
 
 ### Nimbus
 Status: In Development
 A civic literacy AI coach that translates complex policy, legislation, and government processes into accessible language. Built to be a research companion, not a replacement for critical thinking.
-
-### tvn-vault
-Status: In Development
-A data integrity system designed to ensure that records, documents, and digital artifacts remain verifiable and tamper-evident over time.
 
 
 ## Community
