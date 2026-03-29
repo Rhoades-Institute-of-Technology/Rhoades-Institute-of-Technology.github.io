@@ -2,7 +2,7 @@
 @TVN_META
 role: standard
 desc: Root HTML template — meta viewport, font preloads, body element, %sveltekit% placeholders
-last_updated: 2026-03-24
+last_updated: 2026-03-28
 @END_META
 -->
 
@@ -13,23 +13,22 @@ last_updated: 2026-03-24
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="X-Content-Type-Options" content="nosniff" />
-	<meta http-equiv="X-Frame-Options" content="DENY" />
 	<meta name="referrer" content="strict-origin-when-cross-origin" />
 		<link rel="icon" href="./favicon.ico" />
 		<link rel="preload" href="./fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="./fonts/jetbrains-mono-var.woff2" as="font" type="font/woff2" crossorigin />
-		<meta http-equiv="content-security-policy" content="default-src 'self'; frame-src https://tally.so https://js.stripe.com https://checkout.stripe.com; connect-src 'self' https://tally.so; font-src 'self'; img-src 'self' data:; media-src 'self'; script-src 'self' 'sha256-jXkfk7hvmuNRIc0m1vcxVtScUDT7V99WSQERiFyYNH8='; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self' https://tally.so">
+		<meta http-equiv="content-security-policy" content="default-src 'self'; frame-src https://tally.so https://js.stripe.com https://checkout.stripe.com; connect-src 'self' https://tally.so; font-src 'self'; img-src 'self' data: https://res.cloudinary.com; media-src 'self'; script-src 'self' 'sha256-6CS9S8kh73seacDXKKhamemUu9un3frN66vyQq9ueAM='; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self' https://tally.so">
 		<link href="./_app/immutable/assets/0.CP-tlIpT.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.ffSgYji2.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/D3iOPR2w.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.DoGfdSxc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DMFtJJMV.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/DecByj_Q.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/D0iwhpLH.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.Be8V5xf-.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.BnLgniyC.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/C1FmrZbK.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/BMePyOYm.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.CDWhMnAl.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.BKzYocY4.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/D6YF6ztN.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/BpYtEjHh.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CjAyzTih.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/CSPDGRi_.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/3.DgPD7Qnr.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/BOIcZIsy.js">
@@ -40,15 +39,15 @@ last_updated: 2026-03-24
 			
 			<script>
 				{
-					__sveltekit_1c7b9f5 = {
+					__sveltekit_171eqmz = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.ffSgYji2.js"),
-						import("./_app/immutable/entry/app.Be8V5xf-.js")
+						import("./_app/immutable/entry/start.DoGfdSxc.js"),
+						import("./_app/immutable/entry/app.BnLgniyC.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3],
