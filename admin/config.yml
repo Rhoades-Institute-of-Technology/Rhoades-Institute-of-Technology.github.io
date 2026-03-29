@@ -26,6 +26,85 @@ collections:
       - { name: featured_image, label: Featured Image, widget: image }
       - { name: body, label: Body, widget: markdown }
 
+  - name: pages
+    label: Page Content
+    files:
+      - name: hero
+        label: Homepage Hero
+        file: src/lib/data/hero.json
+        fields:
+          - { name: tagline, label: Tagline, widget: string }
+          - { name: supporting, label: Supporting Text, widget: text }
+          - { name: cta_text, label: CTA Button Text, widget: string }
+          - { name: cta_href, label: CTA Button Link, widget: string }
+
+      - name: about
+        label: About Page
+        file: src/lib/data/about.json
+        fields:
+          - { name: narrative, label: Narrative, widget: text }
+          - { name: founder_story, label: Founder Story, widget: text }
+          - { name: codex, label: Codex Description, widget: text }
+          - name: values
+            label: Core Values
+            widget: list
+            fields:
+              - { name: name, label: Value Name, widget: string }
+              - { name: description, label: Description, widget: text }
+          - { name: nonprofit_info, label: Nonprofit Info, widget: text }
+
+      - name: community
+        label: Community Page
+        file: src/lib/data/community.json
+        fields:
+          - { name: concept, label: Concept, widget: text }
+          - { name: gamers_origin, label: Gamers Origin, widget: text }
+          - { name: how_it_works, label: How It Works, widget: text }
+          - { name: gamesgiving, label: Gamesgiving, widget: text }
+          - { name: invitation, label: Invitation, widget: text }
+
+      - name: donate
+        label: Donate Page
+        file: src/lib/data/donate.json
+        fields:
+          - { name: impact, label: Impact Statement, widget: text }
+          - { name: what_funds, label: What Your Donation Funds, widget: text }
+          - name: tiers
+            label: Donation Tiers
+            widget: list
+            fields:
+              - { name: amount, label: Amount ($), widget: number, value_type: int }
+              - { name: label, label: Tier Label, widget: string }
+              - { name: url, label: Stripe Payment Link, widget: string }
+          - { name: disclosure, label: Tax Disclosure, widget: text }
+
+      - name: contact
+        label: Contact Page
+        file: src/lib/data/contact.json
+        fields:
+          - { name: intro, label: Intro Text, widget: text }
+          - { name: direct_info, label: Direct Contact Info, widget: text }
+
+  - name: projects
+    label: Projects
+    file: src/lib/data/projects.json
+    files:
+      - name: projects
+        label: Project List
+        file: src/lib/data/projects.json
+        fields:
+          - name: projects
+            label: Projects
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: description, label: Description, widget: text }
+              - name: tags
+                label: Tags
+                widget: list
+                field: { name: tag, widget: string }
+              - { name: status, label: Status, widget: select, options: ["Active", "In Development", "Prototype", "Concept", "Draft Framework", "Patent Pending"] }
+
   - name: settings
     label: Site Settings
     files:
@@ -63,7 +142,7 @@ collections:
           - { name: about, label: Hub About Text, widget: text }
           - { name: discord_url, label: Discord Invite URL, widget: string }
           - name: projects
-            label: Projects
+            label: Hub Projects
             widget: list
             fields:
               - { name: name, label: Name, widget: string }
