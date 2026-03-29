@@ -4,11 +4,11 @@ backend:
   branch: main
   base_url: https://sveltia-cms-auth.rit-ptaa.workers.dev
 
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: diepkxvif
-    api_key: 763915771293399
+media_libraries:
+  cloudinary:
+    config:
+      cloud_name: diepkxvif
+      api_key: 763915771293399
 
 collections:
   - name: blog
@@ -23,7 +23,7 @@ collections:
       - { name: author, label: Author, widget: string, default: "Johnathon Rhoades" }
       - { name: excerpt, label: Excerpt, widget: text }
       - { name: tags, label: Tags, widget: list, field: { name: tag, widget: string } }
-      - { name: featured_image, label: Featured Image, widget: string, hint: "Cloudinary public ID (e.g. rit-site/blog/my-image)" }
+      - { name: featured_image, label: Featured Image, widget: image }
       - { name: body, label: Body, widget: markdown }
 
   - name: settings
@@ -41,7 +41,7 @@ collections:
               - { name: name, label: Name, widget: string }
               - { name: role, label: Role, widget: string }
               - { name: description, label: Description, widget: text }
-              - { name: avatar, label: Avatar, widget: string, required: false, hint: "Cloudinary public ID" }
+              - { name: avatar, label: Avatar, widget: image, required: false }
               - name: links
                 label: Links
                 widget: list
@@ -52,7 +52,7 @@ collections:
                 label: Gallery
                 widget: list
                 fields:
-                  - { name: src, label: Image, widget: string, hint: "Cloudinary public ID" }
+                  - { name: src, label: Image, widget: image }
                   - { name: alt, label: Alt Text, widget: string }
                   - { name: caption, label: Caption, widget: string, required: false }
 
