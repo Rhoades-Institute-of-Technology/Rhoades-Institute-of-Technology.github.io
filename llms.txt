@@ -1,0 +1,116 @@
+# Rhoades Institute of Technology
+
+> A Wisconsin 501(c)(3) nonprofit focused on civic literacy, technology education, and community dialogue.
+
+URL: https://rhoades-institute-of-technology.github.io
+Contact: rit.ptaa@gmail.com
+Type: 501(c)(3) Nonprofit Organization
+Location: Wisconsin, USA
+
+## About
+
+The Rhoades Institute of Technology is a Wisconsin 501(c)(3) nonprofit focused on civic literacy, technology education, and community dialogue. We build open-source tools, draft model legislation, run community events, and develop educational resources — all grounded in the belief that informed citizens are the foundation of functional democracy. RIT was incorporated on July 13, 2025, born from a simple realization: the systems meant to keep government accountable had been quietly hollowed out, and rebuilding them would take more than outrage — it would take infrastructure.
+
+## Mission
+
+Civic literacy starts with showing up.
+
+The Rhoades Institute of Technology is a Wisconsin nonprofit building tools and communities that make civic participation practical, informed, and accessible to everyone.
+
+## Core Values
+
+- **Curiosity**: Every project starts with a question, not an answer. RIT prioritizes investigation over assumption and treats unknowns as starting points rather than obstacles.
+- **Evidence**: Claims require sources. Positions require data. RIT grounds its work in verifiable information and rejects arguments that rely on emotional appeal alone.
+- **Community**: Civic infrastructure is built by people who know each other. RIT invests in real relationships — local, interest-based, and sustained over time — as the foundation for civic participation.
+- **Nonpartisanship**: RIT does not endorse candidates, parties, or ideologies. The work is about systems and access, not political alignment. Tools built here serve everyone or they serve no one.
+- **Accessibility**: Civic tools that only experts can use are not civic tools. RIT designs for clarity, usability, and inclusion — meeting people where they are, not where we wish they were.
+- **Dialogue**: Disagreement is expected. Bad faith is not. RIT creates spaces where difficult conversations happen productively, with ground rules that protect both candor and dignity.
+- **Creativity**: Policy does not have to be dry. Technology does not have to be cold. RIT uses games, events, and unconventional formats to make civic engagement something people actually want to do.
+- **Responsibility**: Building tools that affect public life carries obligations. RIT accounts for second-order effects, documents decisions transparently, and owns its mistakes publicly.
+- **Collaboration**: No single organization can rebuild civic infrastructure alone. RIT partners with educators, technologists, policymakers, and community organizers — sharing credit and sharing work.
+- **Progress**: Shipping matters more than planning. RIT favors working prototypes over polished proposals and measures success by what actually exists, not what was promised.
+- **Transparency**: RIT builds in public, publishes its financials, and documents its process. If the organization asks government to be transparent, it holds itself to the same standard.
+- **Ethical Stewardship**: Technology is not neutral. Every tool RIT builds encodes values — intentionally. Ethical review is not an afterthought; it is a design constraint applied from the start.
+
+## Projects
+
+### No Solos Alpha
+Status: In Development
+A cooperative multiplayer game built around one rule: no solo play. Every mechanic requires teamwork, communication, and shared strategy. Designed as both entertainment and a proof of concept for collaborative problem-solving.
+
+### PTAA
+Status: Draft Framework
+The Political Transparency and Accountability Act — a model legislative framework requiring real-time PAC donor disclosure, banning anonymous pass-through contributions, and establishing a Citizen Oversight Corps for public auditing of political finance. Grounded in 82% public support for campaign finance transparency.
+
+### TVN Bridge
+Status: Patent Pending
+An AI trust and verification infrastructure project currently in development. Details are limited while intellectual property protections are being finalized.
+
+### SORS
+Status: Active
+The Snow Operations Reporting System makes invisible labor visible through structured data collection. It documents snow removal work — conditions, time spent, equipment used — turning an undervalued job into a measurable, accountable record.
+
+### Sentry / Snow Stakes
+Status: Prototype
+A hardware companion to SORS — physical markers and sensor systems that support snow operations reporting with real-world reference points for documentation and accountability.
+
+### Wayfinder
+Status: In Development
+AI-guided learning layers for open-source creative tools like Godot, GIMP, and Blender. Inspired by gaming overlays like Deadly Boss Mods — Wayfinder highlights the next action in real-time, gives context on why, and waits for the human to execute. Guided mastery, not automation. The Godot editor plugin is the most developed implementation, with a working step engine, UI highlighting, and instruction system.
+
+### Nimbus
+Status: In Development
+A civic literacy AI coach that translates complex policy, legislation, and government processes into accessible language. Built to be a research companion, not a replacement for critical thinking.
+
+### tvn-vault
+Status: In Development
+A data integrity system designed to ensure that records, documents, and digital artifacts remain verifiable and tamper-evident over time.
+
+
+## Community
+
+Civic conversation does not start with "let's talk about policy." It starts with shared interests — gaming, cooking, building, creating. When people who trust each other through play start talking about their neighborhood, their schools, their local government, real civic dialogue happens. RIT's community model is built on this premise: relationships first, civic engagement second.
+
+## Blog Posts
+
+- [One Year In: From a Speech No One Gave to a Nonprofit That Exists](https://rhoades-institute-of-technology.github.io/blog/one-year-in) (2026-04-24) — Twelve months from a civic awakening to a booth at MGC — an honest accounting of RIT's first year.
+- [SORS: Making Invisible Labor Visible](https://rhoades-institute-of-technology.github.io/blog/sors-making-invisible-labor-visible) (2025-12-04) — A snow operations reporting tool that turns unnoticed physical labor into structured, quantifiable data.
+- [Gamesgiving: Our First Community Event](https://rhoades-institute-of-technology.github.io/blog/gamesgiving-first-community-event) (2025-11-29) — RIT attended Gamesgiving 2025 in Racine — our first public fundraiser — and walked away with convention leads, new connections, and proof the model works.
+- [12 Core Values: What RIT Stands For](https://rhoades-institute-of-technology.github.io/blog/12-core-values) (Tue Nov 18 2025 00:00:00 GMT+0000 (Coordinated Universal Time)) — Twelve values that guide how we operate — not aspirational platitudes, but practical commitments.
+- [Wisconsin Incorporated: How We Formed a Nonprofit](https://rhoades-institute-of-technology.github.io/blog/wisconsin-incorporated) (2025-07-13) — The practical story of turning an idea into a legal entity — Articles of Incorporation, bylaws, and a $35 filing fee.
+
+## Donate
+
+Every dollar funds real work: open-source civic tools, community events, legislative research, and educational resources. RIT operates lean — no office, no paid staff, no overhead bloat. Donations go directly to project development, event costs, and infrastructure.
+
+Donation page: https://rhoades-institute-of-technology.github.io/donate
+
+## Contact
+
+Have a question, a collaboration idea, or just want to learn more about what RIT is building? We read every message and respond as quickly as a one-person operation allows.
+
+For direct inquiries, reach Johnathon Rhoades at rit.ptaa@gmail.com. You can also connect with RIT on social media or use the form below.
+
+## Pages
+
+- https://rhoades-institute-of-technology.github.io/ — Homepage
+- https://rhoades-institute-of-technology.github.io/about — About RIT, founder story, 12 core values
+- https://rhoades-institute-of-technology.github.io/projects — Project portfolio
+- https://rhoades-institute-of-technology.github.io/community — Community model and events
+- https://rhoades-institute-of-technology.github.io/blog — Blog
+- https://rhoades-institute-of-technology.github.io/donate — Support RIT
+- https://rhoades-institute-of-technology.github.io/contact — Contact form
+- https://rhoades-institute-of-technology.github.io/hub — QR code landing page, artist showcase
+- https://rhoades-institute-of-technology.github.io/open-source — Open source credits (120+ packages)
+- https://rhoades-institute-of-technology.github.io/no-solos — No Solos Alpha game info
+- https://rhoades-institute-of-technology.github.io/privacy — Privacy policy
+- https://rhoades-institute-of-technology.github.io/legal — Legal and terms
+
+## Technical
+
+- Built with SvelteKit (adapter-static)
+- Hosted on GitHub Pages
+- Images via Cloudinary CDN
+- CMS: Sveltia CMS (Git-backed)
+- Zero tracking, zero analytics, zero cookies
+- Full source: compiled output only (shared source model)
