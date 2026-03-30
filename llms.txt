@@ -81,7 +81,7 @@ Civic conversation does not start with "let's talk about policy." It starts with
 
 ## Donate
 
-RIT needs your support to keep building. We operate lean — no office lease, no executive salaries, no fundraising consultants — so every dollar goes directly to development, events, and infrastructure. But lean is not self-sufficient. Without funding, development slows, events can't happen, and the tools don't reach the people who need them. Your donation keeps this work going.
+RIT has run lean out of necessity, not choice. One person covering all costs personally while building everything is not sustainable — it's survival mode. To grow into the organization this mission requires, RIT needs to pay contributors, hire legal counsel, cover event costs, and maintain real infrastructure. Your donation goes further here than at most nonprofits because there's no overhead bureaucracy — but going further is not the same as not needed. We need financial support to survive and scale.
 
 Donation page: https://rhoades-institute-of-technology.github.io/donate
 
