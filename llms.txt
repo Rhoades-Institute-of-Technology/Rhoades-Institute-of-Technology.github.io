@@ -81,7 +81,7 @@ Civic conversation does not start with "let's talk about policy." It starts with
 
 ## Donate
 
-Every dollar funds real work: open-source civic tools, community events, legislative research, and educational resources. RIT operates lean — no office, no paid staff, no overhead bloat. Donations go directly to project development, event costs, and infrastructure.
+RIT needs your support to keep building. We operate lean — no office lease, no executive salaries, no fundraising consultants — so every dollar goes directly to development, events, and infrastructure. But lean is not self-sufficient. Without funding, development slows, events can't happen, and the tools don't reach the people who need them. Your donation keeps this work going.
 
 Donation page: https://rhoades-institute-of-technology.github.io/donate
 
