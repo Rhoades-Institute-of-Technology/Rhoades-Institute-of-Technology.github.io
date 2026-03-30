@@ -4,6 +4,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager | RIT</title>
+  <style>
+    /* Fix Cloudinary modal sizing on wide screens */
+    [class*="media-library"] iframe,
+    .cloudinary-widget iframe,
+    [role="dialog"] iframe {
+      min-width: 800px !important;
+      min-height: 600px !important;
+      max-width: 90vw !important;
+      max-height: 80vh !important;
+    }
+
+    /* Ensure modals/dialogs are above everything */
+    [role="dialog"],
+    [class*="modal"],
+    [class*="overlay"] {
+      z-index: 99999 !important;
+    }
+
+    /* Fix button click targets — ensure they're not covered */
+    button, [role="button"], a[href] {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Wider editor panels on ultrawide */
+    @media (min-width: 1920px) {
+      [class*="editor"],
+      [class*="preview"] {
+        max-width: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
