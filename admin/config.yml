@@ -174,6 +174,26 @@ collections:
                 widget: list
                 field: { name: tag, widget: string }
 
+      - name: resources
+        label: Resources / Downloads
+        file: src/lib/data/resources.json
+        fields:
+          - { name: intro, label: Page Intro, widget: text }
+          - name: categories
+            label: Categories
+            widget: list
+            fields:
+              - { name: name, label: Category Name, widget: string }
+              - name: items
+                label: Items
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - { name: file_url, label: Download URL, widget: string, required: false, hint: "Cloudinary URL for the file" }
+                  - { name: thumbnail, label: Thumbnail, widget: image, required: false }
+                  - { name: file_type, label: File Type, widget: string, default: "PDF", hint: "PDF, PNG, ZIP, etc." }
+
       - name: team
         label: Team & Governance
         file: src/lib/data/team.json
