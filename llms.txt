@@ -9,7 +9,7 @@ Location: Wisconsin, USA
 
 ## About
 
-The Rhoades Institute of Technology is a Wisconsin 501(c)(3) nonprofit focused on civic literacy, technology education, and community dialogue. We build open-source tools, draft model legislation, run community events, and develop educational resources — all grounded in the belief that informed citizens are the foundation of functional democracy. RIT was incorporated on July 13, 2025, born from a simple realization: the systems meant to keep government accountable had been quietly hollowed out, and rebuilding them would take more than outrage — it would take infrastructure.
+The Rhoades Institute of Technology is a Wisconsin 501(c)(3) nonprofit focused on civic literacy, technology education, and community dialogue. We build technology tools, draft model legislation, run community events, and develop educational resources — all grounded in the belief that informed citizens are the foundation of functional democracy. RIT was incorporated on July 13, 2025, born from a simple realization: the systems meant to keep government accountable had been quietly hollowed out, and rebuilding them would take more than outrage — it would take infrastructure.
 
 ## Mission
 
