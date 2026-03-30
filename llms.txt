@@ -96,16 +96,30 @@ For direct inquiries, reach Johnathon Rhoades at rit.ptaa@gmail.com. You can als
 
 - https://rhoades-institute-of-technology.github.io/ — Homepage
 - https://rhoades-institute-of-technology.github.io/about — About RIT, founder story, 12 core values
+- https://rhoades-institute-of-technology.github.io/team — Team, governance, board recruitment, volunteer opportunities
 - https://rhoades-institute-of-technology.github.io/projects — Project portfolio
 - https://rhoades-institute-of-technology.github.io/community — Community model and events
 - https://rhoades-institute-of-technology.github.io/blog — Blog
+- https://rhoades-institute-of-technology.github.io/ask — Ask AI about RIT (prompt builder for external models)
 - https://rhoades-institute-of-technology.github.io/donate — Support RIT
-- https://rhoades-institute-of-technology.github.io/contact — Contact form
-- https://rhoades-institute-of-technology.github.io/hub — QR code landing page, artist showcase
+- https://rhoades-institute-of-technology.github.io/contact — Contact form with reason routing
+- https://rhoades-institute-of-technology.github.io/hub — QR code landing page, artist showcase, survey link
+- https://rhoades-institute-of-technology.github.io/no-solos — No Solos Alpha game (OUTRAGE raid boss)
+- https://rhoades-institute-of-technology.github.io/no-solos/feedback — OUTRAGE community survey on gaming monetization
 - https://rhoades-institute-of-technology.github.io/open-source — Open source credits (120+ packages)
-- https://rhoades-institute-of-technology.github.io/no-solos — No Solos Alpha game info
-- https://rhoades-institute-of-technology.github.io/privacy — Privacy policy
-- https://rhoades-institute-of-technology.github.io/legal — Legal and terms
+- https://rhoades-institute-of-technology.github.io/privacy — Privacy policy (GDPR, CCPA, breach notification)
+- https://rhoades-institute-of-technology.github.io/legal — Legal, terms, project-specific legal links
+
+## TVN Bridge Section
+
+- https://rhoades-institute-of-technology.github.io/tvn — TVN Bridge landing page (AI governance platform)
+- https://rhoades-institute-of-technology.github.io/tvn/vault — TVN Vault (encrypted local workspace)
+- https://rhoades-institute-of-technology.github.io/tvn/tsp — Truth Security Protocol deep dive
+- https://rhoades-institute-of-technology.github.io/tvn/blog — TVN blog
+- https://rhoades-institute-of-technology.github.io/tvn/signup — TVN waitlist with optional survey
+- https://rhoades-institute-of-technology.github.io/tvn/ask — Ask AI about TVN Bridge specifically
+- https://rhoades-institute-of-technology.github.io/tvn/legal — TVN licensing philosophy (shared source model)
+- https://rhoades-institute-of-technology.github.io/tvn/legal/feedback — Collaborative licensing feedback tool
 
 ## Technical
 
