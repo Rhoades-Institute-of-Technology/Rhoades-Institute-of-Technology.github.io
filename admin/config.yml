@@ -157,6 +157,7 @@ collections:
         file: src/lib/data/hub-config.json
         fields:
           - { name: about, label: Hub About Text, widget: text }
+          - { name: logo, label: Hub Logo, widget: image, hint: "Cloudinary public ID or full URL" }
           - { name: discord_url, label: Discord Invite URL, widget: string }
           - name: projects
             label: Hub Projects
@@ -202,3 +203,11 @@ collections:
             fields:
               - { name: name, label: Policy Name, widget: string }
               - { name: status, label: Status, widget: select, options: ["Filed", "Draft", "Adopted"] }
+
+      - name: site-settings
+        label: Site-Wide Settings
+        file: src/lib/data/site-settings.json
+        fields:
+          - { name: navbar_logo, label: Navbar Logo, widget: image, hint: "Cloudinary public ID or full URL" }
+          - { name: hub_logo, label: Hub Logo, widget: image, hint: "Small logo for the hub page" }
+          - { name: og_image, label: OG Image, widget: image, hint: "Default social sharing image" }
