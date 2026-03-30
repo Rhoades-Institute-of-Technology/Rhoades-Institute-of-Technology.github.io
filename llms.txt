@@ -43,8 +43,8 @@ Status: Alpha
 An encrypted local workspace — notes, databases, and double-entry accounting with SQLCipher encryption. No cloud, no telemetry. Your passphrase is the only key.
 
 ### No Solos Alpha
-Status: In Development
-A cooperative multiplayer game built around one rule: no solo play. Every mechanic requires teamwork, communication, and shared strategy. Designed as both entertainment and a proof of concept for collaborative problem-solving.
+Status: Alpha
+A community raid boss game for conventions and events. Attendees scan a QR code, pick a hero class, and join the fight against OUTRAGE — an evil corpo AI boss on the big screen. Vanilla JavaScript, hand-drawn sprites, runs on a phone. The spectacle is the conversation starter; the mission is what comes after.
 
 ### PTAA
 Status: Draft Framework
@@ -74,6 +74,7 @@ Civic conversation does not start with "let's talk about policy." It starts with
 ## Blog Posts
 
 - [One Year In: From a Speech No One Gave to a Nonprofit That Exists](https://rhoades-institute-of-technology.github.io/blog/one-year-in) (2026-04-24) — Twelve months from a civic awakening to a booth at MGC — an honest accounting of RIT's first year.
+- [No Solos Alpha: Why a Nonprofit Made a Game](https://rhoades-institute-of-technology.github.io/blog/no-solos-alpha-why-a-nonprofit-made-a-game) (2026-03-30) — There's a giant evil AI on screen. A room full of strangers has to take it down together. That's the game. Here's why we built it.
 - [SORS: Making Invisible Labor Visible](https://rhoades-institute-of-technology.github.io/blog/sors-making-invisible-labor-visible) (2025-12-04) — A snow operations reporting tool that turns unnoticed physical labor into structured, quantifiable data.
 - [Gamesgiving: Our First Community Event](https://rhoades-institute-of-technology.github.io/blog/gamesgiving-first-community-event) (2025-11-29) — RIT attended Gamesgiving 2025 in Racine — our first public fundraiser — and walked away with convention leads, new connections, and proof the model works.
 - [12 Core Values: What RIT Stands For](https://rhoades-institute-of-technology.github.io/blog/12-core-values) (Tue Nov 18 2025 00:00:00 GMT+0000 (Coordinated Universal Time)) — Twelve values that guide how we operate — not aspirational platitudes, but practical commitments.

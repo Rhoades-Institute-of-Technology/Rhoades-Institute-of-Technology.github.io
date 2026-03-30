@@ -81,6 +81,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://rhoades-institute-of-technology.github.io/blog/no-solos-alpha-why-a-nonprofit-made-a-game</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://rhoades-institute-of-technology.github.io/blog/one-year-in</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
