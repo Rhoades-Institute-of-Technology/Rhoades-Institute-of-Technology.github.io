@@ -158,10 +158,10 @@ collections:
         fields:
           - { name: about, label: Hub About Text, widget: text }
           - { name: logo, label: Hub Logo, widget: image, hint: "Cloudinary public ID or full URL" }
-          - { name: logo_size, label: Hub Logo Size, widget: string, default: "w-24 h-24", hint: "Tailwind classes e.g. w-16 h-16, w-24 h-24, w-32 h-32" }
+          - { name: logo_size, label: Hub Logo Height (px), widget: string, default: "96", hint: "Height in pixels e.g. 64, 96, 128. Width scales automatically." }
           - { name: discord_url, label: Discord Invite URL, widget: string }
           - { name: discord_logo, label: Discord Logo, widget: image, required: false, hint: "Upload your custom Discord logo" }
-          - { name: discord_logo_size, label: Discord Logo Size, widget: string, default: "w-8 h-8", required: false, hint: "Tailwind classes e.g. w-8 h-8, w-12 h-12" }
+          - { name: discord_logo_size, label: Discord Logo Height (px), widget: string, default: "192", required: false, hint: "Height in pixels e.g. 128, 192, 256. Width scales automatically." }
           - name: projects
             label: Hub Projects
             widget: list
@@ -232,8 +232,8 @@ collections:
         file: src/lib/data/site-settings.json
         fields:
           - { name: navbar_logo, label: Navbar Logo, widget: image, hint: "Cloudinary public ID or full URL" }
-          - { name: navbar_logo_size, label: Navbar Logo Size, widget: string, default: "h-14 w-auto", hint: "Tailwind classes e.g. h-14 w-auto, h-16 w-auto, w-32 h-auto" }
+          - { name: navbar_logo_size, label: Navbar Logo Height (px), widget: string, default: "56", hint: "Height in pixels e.g. 40, 56, 64. Width scales automatically." }
           - { name: hub_logo, label: Hub Logo, widget: image, hint: "Small logo for the hub page" }
           - { name: og_image, label: OG Image, widget: image, hint: "Default social sharing image" }
           - { name: tvn_logo, label: TVN Logo, widget: image, required: false, hint: "Leave empty to show text — add image when logo is ready" }
-          - { name: tvn_logo_size, label: TVN Logo Size, widget: string, default: "h-10 w-auto", required: false, hint: "Tailwind classes" }
+          - { name: tvn_logo_size, label: TVN Logo Height (px), widget: string, default: "40", required: false, hint: "Height in pixels e.g. 32, 40, 48. Width scales automatically." }
