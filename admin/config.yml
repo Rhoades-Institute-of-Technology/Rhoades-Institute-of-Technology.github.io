@@ -92,6 +92,8 @@ collections:
               - { name: label, label: Tier Label, widget: string }
               - { name: url, label: Stripe Payment Link, widget: string }
           - { name: disclosure, label: Tax Disclosure, widget: text }
+          - { name: ein, label: EIN, widget: string }
+          - { name: ein_note, label: EIN Note, widget: string, required: false, hint: "e.g. 'pending IRS determination' — leave blank once confirmed" }
 
       - name: contact
         label: Contact Page
