@@ -167,3 +167,36 @@ collections:
                 label: Tags
                 widget: list
                 field: { name: tag, widget: string }
+
+      - name: team
+        label: Team & Governance
+        file: src/lib/data/team.json
+        fields:
+          - { name: intro, label: Page Intro, widget: text }
+          - name: leadership
+            label: Leadership
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: role, label: Role, widget: string }
+              - { name: bio, label: Bio, widget: text }
+              - { name: linkedin, label: LinkedIn URL, widget: string, required: false }
+              - { name: avatar, label: Avatar, widget: image, required: false }
+          - name: board_positions
+            label: Board Positions
+            widget: list
+            fields:
+              - { name: role, label: Role, widget: string }
+              - { name: expertise, label: Expertise Sought, widget: string }
+          - name: volunteer_roles
+            label: Volunteer Roles
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+          - name: governance_policies
+            label: Governance Policies
+            widget: list
+            fields:
+              - { name: name, label: Policy Name, widget: string }
+              - { name: status, label: Status, widget: select, options: ["Filed", "Draft", "Adopted"] }
