@@ -151,6 +151,7 @@ collections:
                   - { name: src, label: Image, widget: image }
                   - { name: alt, label: Alt Text, widget: string }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - { name: explicit, label: Mature Content, widget: boolean, default: false, required: false, hint: "Check if this image contains nudity or disturbing imagery" }
 
       - name: hub
         label: Hub Settings
