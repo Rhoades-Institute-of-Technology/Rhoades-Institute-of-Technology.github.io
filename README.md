@@ -25,29 +25,29 @@ Built by one developer with governed AI assistance. Every agent session clocked 
 
 ### Explore
 
-- **[Visit the site →](https://rhoades-institute-of-technology.github.io)** — Full project details, blog, community info
-- **[TVN Bridge →](https://rhoades-institute-of-technology.github.io/tvn)** — AI governance platform deep dive
-- **[Ask AI about RIT →](https://rhoades-institute-of-technology.github.io/ask)** — Pre-loaded context for any AI model
-- **[OUTRAGE Survey →](https://rhoades-institute-of-technology.github.io/no-solos/feedback)** — Help shape our game's monetization model
+- **[Visit the site →](https://rit-tech.org)** — Full project details, blog, community info
+- **[TVN Bridge →](https://rit-tech.org/tvn)** — AI governance platform deep dive
+- **[Ask AI about RIT →](https://rit-tech.org/ask)** — Pre-loaded context for any AI model
+- **[OUTRAGE Survey →](https://rit-tech.org/no-solos/feedback)** — Help shape our game's monetization model
 
 ### Support
 
 RIT runs lean out of necessity, not choice. We desperately need funding to pay contributors, attend events, file IP protections, and scale beyond Wisconsin.
 
-**[Donate →](https://rhoades-institute-of-technology.github.io/donate)** (501(c)(3) tax-deductible)
+**[Donate →](https://rit-tech.org/donate)** (501(c)(3) tax-deductible)
 
 ### Built With
 
 SvelteKit · Tailwind CSS · Cloudinary CDN · Sveltia CMS · Cloudflare Workers · D1 · Turnstile · GitHub Pages
 
-This site is built with AI assistance at every stage. [Read more about our approach →](https://rhoades-institute-of-technology.github.io/tvn/blog/one-developer-250000-lines)
+This site is built with AI assistance at every stage. [Read more about our approach →](https://rit-tech.org/tvn/blog/one-developer-250000-lines)
 
 ### Connect
 
 - **[Discord →](https://discord.gg/ZFaUkuh6ZC)**
-- **[Contact →](https://rhoades-institute-of-technology.github.io/contact)**
+- **[Contact →](https://rit-tech.org/contact)**
 - **CypherCon 2026** (April 1-2, Milwaukee) · **MGC 2026** (April 24-26)
 
 ---
 
-*Rhoades Institute of Technology is a Wisconsin 501(c)(3) nonprofit. This repository contains compiled site output only. Source code is maintained under RIT's [shared source model](https://rhoades-institute-of-technology.github.io/tvn/legal#licensing).*
+*Rhoades Institute of Technology is a Wisconsin 501(c)(3) nonprofit. This repository contains compiled site output only. Source code is maintained under RIT's [shared source model](https://rit-tech.org/tvn/legal#licensing).*

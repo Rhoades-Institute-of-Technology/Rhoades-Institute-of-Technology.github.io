@@ -2,7 +2,7 @@
 
 > A Wisconsin 501(c)(3) nonprofit focused on civic literacy, technology education, and community dialogue.
 
-URL: https://rhoades-institute-of-technology.github.io
+URL: https://rit-tech.org
 Contact: rit.ptaa@gmail.com
 Type: 501(c)(3) Nonprofit Organization
 Location: Wisconsin, USA
@@ -73,18 +73,18 @@ Civic conversation does not start with "let's talk about policy." It starts with
 
 ## Blog Posts
 
-- [One Year In: From a Speech No One Gave to a Nonprofit That Exists](https://rhoades-institute-of-technology.github.io/blog/one-year-in) (2026-04-24) — Twelve months from a civic awakening to a booth at MGC — an honest accounting of RIT's first year.
-- [No Solos Alpha: Why a Nonprofit Made a Game](https://rhoades-institute-of-technology.github.io/blog/no-solos-alpha-why-a-nonprofit-made-a-game) (2026-03-30) — There's a giant evil AI on screen. A room full of strangers has to take it down together. That's the game. Here's why we built it.
-- [SORS: Making Invisible Labor Visible](https://rhoades-institute-of-technology.github.io/blog/sors-making-invisible-labor-visible) (2025-12-04) — A snow operations reporting tool that turns unnoticed physical labor into structured, quantifiable data.
-- [Gamesgiving: Our First Community Event](https://rhoades-institute-of-technology.github.io/blog/gamesgiving-first-community-event) (2025-11-29) — RIT attended Gamesgiving 2025 in Racine — our first public fundraiser — and walked away with convention leads, new connections, and proof the model works.
-- [12 Core Values: What RIT Stands For](https://rhoades-institute-of-technology.github.io/blog/12-core-values) (Tue Nov 18 2025 00:00:00 GMT+0000 (Coordinated Universal Time)) — Twelve values that guide how we operate — not aspirational platitudes, but practical commitments.
-- [Wisconsin Incorporated: How We Formed a Nonprofit](https://rhoades-institute-of-technology.github.io/blog/wisconsin-incorporated) (2025-07-13) — The practical story of turning an idea into a legal entity — Articles of Incorporation, bylaws, and a $35 filing fee.
+- [One Year In: From a Speech No One Gave to a Nonprofit That Exists](https://rit-tech.org/blog/one-year-in) (2026-04-24) — Twelve months from a civic awakening to a booth at MGC — an honest accounting of RIT's first year.
+- [No Solos Alpha: Why a Nonprofit Made a Game](https://rit-tech.org/blog/no-solos-alpha-why-a-nonprofit-made-a-game) (2026-03-30) — There's a giant evil AI on screen. A room full of strangers has to take it down together. That's the game. Here's why we built it.
+- [SORS: Making Invisible Labor Visible](https://rit-tech.org/blog/sors-making-invisible-labor-visible) (2025-12-04) — A snow operations reporting tool that turns unnoticed physical labor into structured, quantifiable data.
+- [Gamesgiving: Our First Community Event](https://rit-tech.org/blog/gamesgiving-first-community-event) (2025-11-29) — RIT attended Gamesgiving 2025 in Racine — our first public fundraiser — and walked away with convention leads, new connections, and proof the model works.
+- [12 Core Values: What RIT Stands For](https://rit-tech.org/blog/12-core-values) (Tue Nov 18 2025 00:00:00 GMT+0000 (Coordinated Universal Time)) — Twelve values that guide how we operate — not aspirational platitudes, but practical commitments.
+- [Wisconsin Incorporated: How We Formed a Nonprofit](https://rit-tech.org/blog/wisconsin-incorporated) (2025-07-13) — The practical story of turning an idea into a legal entity — Articles of Incorporation, bylaws, and a $35 filing fee.
 
 ## Donate
 
 RIT has run lean out of necessity, not choice. One person covering all costs personally while building everything is not sustainable — it's survival mode. To grow into the organization this mission requires, RIT needs to pay contributors, hire legal counsel, cover event costs, and maintain real infrastructure. Your donation goes further here than at most nonprofits because there's no overhead bureaucracy — but going further is not the same as not needed. We need financial support to survive and scale.
 
-Donation page: https://rhoades-institute-of-technology.github.io/donate
+Donation page: https://rit-tech.org/donate
 
 ## Contact
 
@@ -94,32 +94,32 @@ For direct inquiries, reach Johnathon Rhoades at rit.ptaa@gmail.com. You can als
 
 ## Pages
 
-- https://rhoades-institute-of-technology.github.io/ — Homepage
-- https://rhoades-institute-of-technology.github.io/about — About RIT, founder story, 12 core values
-- https://rhoades-institute-of-technology.github.io/team — Team, governance, board recruitment, volunteer opportunities
-- https://rhoades-institute-of-technology.github.io/projects — Project portfolio
-- https://rhoades-institute-of-technology.github.io/community — Community model and events
-- https://rhoades-institute-of-technology.github.io/blog — Blog
-- https://rhoades-institute-of-technology.github.io/ask — Ask AI about RIT (prompt builder for external models)
-- https://rhoades-institute-of-technology.github.io/donate — Support RIT
-- https://rhoades-institute-of-technology.github.io/contact — Contact form with reason routing
-- https://rhoades-institute-of-technology.github.io/hub — QR code landing page, artist showcase, survey link
-- https://rhoades-institute-of-technology.github.io/no-solos — No Solos Alpha game (OUTRAGE raid boss)
-- https://rhoades-institute-of-technology.github.io/no-solos/feedback — OUTRAGE community survey on gaming monetization
-- https://rhoades-institute-of-technology.github.io/open-source — Open source credits (120+ packages)
-- https://rhoades-institute-of-technology.github.io/privacy — Privacy policy (GDPR, CCPA, breach notification)
-- https://rhoades-institute-of-technology.github.io/legal — Legal, terms, project-specific legal links
+- https://rit-tech.org/ — Homepage
+- https://rit-tech.org/about — About RIT, founder story, 12 core values
+- https://rit-tech.org/team — Team, governance, board recruitment, volunteer opportunities
+- https://rit-tech.org/projects — Project portfolio
+- https://rit-tech.org/community — Community model and events
+- https://rit-tech.org/blog — Blog
+- https://rit-tech.org/ask — Ask AI about RIT (prompt builder for external models)
+- https://rit-tech.org/donate — Support RIT
+- https://rit-tech.org/contact — Contact form with reason routing
+- https://rit-tech.org/hub — QR code landing page, artist showcase, survey link
+- https://rit-tech.org/no-solos — No Solos Alpha game (OUTRAGE raid boss)
+- https://rit-tech.org/no-solos/feedback — OUTRAGE community survey on gaming monetization
+- https://rit-tech.org/open-source — Open source credits (120+ packages)
+- https://rit-tech.org/privacy — Privacy policy (GDPR, CCPA, breach notification)
+- https://rit-tech.org/legal — Legal, terms, project-specific legal links
 
 ## TVN Bridge Section
 
-- https://rhoades-institute-of-technology.github.io/tvn — TVN Bridge landing page (AI governance platform)
-- https://rhoades-institute-of-technology.github.io/tvn/vault — TVN Vault (encrypted local workspace)
-- https://rhoades-institute-of-technology.github.io/tvn/tsp — Truth Security Protocol deep dive
-- https://rhoades-institute-of-technology.github.io/tvn/blog — TVN blog
-- https://rhoades-institute-of-technology.github.io/tvn/signup — TVN waitlist with optional survey
-- https://rhoades-institute-of-technology.github.io/tvn/ask — Ask AI about TVN Bridge specifically
-- https://rhoades-institute-of-technology.github.io/tvn/legal — TVN licensing philosophy (shared source model)
-- https://rhoades-institute-of-technology.github.io/tvn/legal/feedback — Collaborative licensing feedback tool
+- https://rit-tech.org/tvn — TVN Bridge landing page (AI governance platform)
+- https://rit-tech.org/tvn/vault — TVN Vault (encrypted local workspace)
+- https://rit-tech.org/tvn/tsp — Truth Security Protocol deep dive
+- https://rit-tech.org/tvn/blog — TVN blog
+- https://rit-tech.org/tvn/signup — TVN waitlist with optional survey
+- https://rit-tech.org/tvn/ask — Ask AI about TVN Bridge specifically
+- https://rit-tech.org/tvn/legal — TVN licensing philosophy (shared source model)
+- https://rit-tech.org/tvn/legal/feedback — Collaborative licensing feedback tool
 
 ## Technical
 

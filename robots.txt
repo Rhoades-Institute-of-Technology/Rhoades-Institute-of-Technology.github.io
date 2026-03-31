@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /admin/
 
-Sitemap: https://rhoades-institute-of-technology.github.io/sitemap.xml
+Sitemap: https://rit-tech.org/sitemap.xml
