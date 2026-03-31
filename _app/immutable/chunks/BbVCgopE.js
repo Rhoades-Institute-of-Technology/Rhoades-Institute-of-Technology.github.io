@@ -1,0 +1,1 @@
+const t={title:"TVN Bridge — Local-First AI Governance Platform",description:"Enforce constraints AI cannot bypass. Sovereign Firewall, Context Gate, Truth Nodes. 90-97% token savings.",image:"https://res.cloudinary.com/diepkxvif/image/upload/f_auto,q_auto/rit-site/og/tvn-og-default"};export{t};
