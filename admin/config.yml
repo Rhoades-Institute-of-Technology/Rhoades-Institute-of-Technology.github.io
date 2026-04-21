@@ -10,6 +10,14 @@ media_libraries:
       cloud_name: diepkxvif
       api_key: 763915771293399
 
+# ---------------------------------------------------------------------------
+# Lens overrides + translations: each page with lens/i18n content now exposes
+# "overrides" (per-lens sparse edits) and "translations" (per-language sparse
+# edits) so every variant is CMS-editable. Sveltia has no YAML anchors so the
+# field shapes are inlined per collection — keep them in sync with the base
+# JSON keys if you add new fields.
+# ---------------------------------------------------------------------------
+
 collections:
   - name: blog
     label: Blog Posts
@@ -24,6 +32,68 @@ collections:
       - { name: excerpt, label: Excerpt, widget: text }
       - { name: tags, label: Tags, widget: list, field: { name: tag, widget: string } }
       - { name: featured_image, label: Featured Image, widget: image }
+      - { name: featured, label: Featured Post, widget: boolean, default: false, required: false, hint: "Pin to top of blog list" }
+      - { name: status, label: Status, widget: select, options: ["draft", "published"], default: "published", required: false }
+      - { name: series, label: Series / Collection (optional), widget: string, required: false, hint: "Group related posts, e.g. 'Founding RIT'" }
+      - { name: canonical_url, label: Canonical URL (optional), widget: string, required: false, hint: "If this post is crossposted, point to the canonical location" }
+      - name: related
+        label: Related Posts (optional)
+        widget: list
+        required: false
+        hint: "Slugs of related posts to link at the bottom"
+        field: { name: slug, widget: string }
+      - name: translations
+        label: Translations (optional)
+        widget: object
+        required: false
+        collapsed: true
+        hint: "Translated title/excerpt/body per language. Body format matches base."
+        fields:
+          - name: es
+            label: Spanish (es)
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: excerpt, label: Excerpt, widget: text, required: false }
+              - { name: body, label: Body, widget: markdown, required: false }
+          - name: hmn
+            label: Hmong (hmn)
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: excerpt, label: Excerpt, widget: text, required: false }
+              - { name: body, label: Body, widget: markdown, required: false }
+          - name: ar
+            label: Arabic (ar)
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: excerpt, label: Excerpt, widget: text, required: false }
+              - { name: body, label: Body, widget: markdown, required: false }
+          - name: de
+            label: German (de)
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: excerpt, label: Excerpt, widget: text, required: false }
+              - { name: body, label: Body, widget: markdown, required: false }
+          - name: pl
+            label: Polish (pl)
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: excerpt, label: Excerpt, widget: text, required: false }
+              - { name: body, label: Body, widget: markdown, required: false }
       - { name: body, label: Body, widget: markdown }
 
   - name: tvn-blog
@@ -39,6 +109,66 @@ collections:
       - { name: excerpt, label: Excerpt, widget: text }
       - { name: tags, label: Tags, widget: list, field: { name: tag, widget: string } }
       - { name: featured_image, label: Featured Image, widget: image }
+      - { name: featured, label: Featured Post, widget: boolean, default: false, required: false, hint: "Pin to top of TVN blog list" }
+      - { name: status, label: Status, widget: select, options: ["draft", "published"], default: "published", required: false }
+      - { name: series, label: Series / Collection (optional), widget: string, required: false }
+      - { name: canonical_url, label: Canonical URL (optional), widget: string, required: false }
+      - name: related
+        label: Related Posts (optional)
+        widget: list
+        required: false
+        field: { name: slug, widget: string }
+      - name: translations
+        label: Translations (optional)
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - name: es
+            label: Spanish (es)
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: excerpt, label: Excerpt, widget: text, required: false }
+              - { name: body, label: Body, widget: markdown, required: false }
+          - name: hmn
+            label: Hmong (hmn)
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: excerpt, label: Excerpt, widget: text, required: false }
+              - { name: body, label: Body, widget: markdown, required: false }
+          - name: ar
+            label: Arabic (ar)
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: excerpt, label: Excerpt, widget: text, required: false }
+              - { name: body, label: Body, widget: markdown, required: false }
+          - name: de
+            label: German (de)
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: excerpt, label: Excerpt, widget: text, required: false }
+              - { name: body, label: Body, widget: markdown, required: false }
+          - name: pl
+            label: Polish (pl)
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string, required: false }
+              - { name: excerpt, label: Excerpt, widget: text, required: false }
+              - { name: body, label: Body, widget: markdown, required: false }
       - { name: body, label: Body, widget: markdown }
 
   - name: pages
@@ -52,6 +182,103 @@ collections:
           - { name: supporting, label: Supporting Text, widget: text }
           - { name: cta_text, label: CTA Button Text, widget: string }
           - { name: cta_href, label: CTA Button Link, widget: string }
+          - name: overrides
+            label: Lens Overrides
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: technical
+                label: Technical Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: tagline, label: Tagline, widget: string, required: false }
+                  - { name: supporting, label: Supporting Text, widget: text, required: false }
+                  - { name: cta_text, label: CTA Button Text, widget: string, required: false }
+                  - { name: cta_href, label: CTA Button Link, widget: string, required: false }
+              - name: civic
+                label: Civic Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: tagline, label: Tagline, widget: string, required: false }
+                  - { name: supporting, label: Supporting Text, widget: text, required: false }
+                  - { name: cta_text, label: CTA Button Text, widget: string, required: false }
+                  - { name: cta_href, label: CTA Button Link, widget: string, required: false }
+              - name: supporter
+                label: Supporter Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: tagline, label: Tagline, widget: string, required: false }
+                  - { name: supporting, label: Supporting Text, widget: text, required: false }
+                  - { name: cta_text, label: CTA Button Text, widget: string, required: false }
+                  - { name: cta_href, label: CTA Button Link, widget: string, required: false }
+              - name: gamer
+                label: Gamer Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: tagline, label: Tagline, widget: string, required: false }
+                  - { name: supporting, label: Supporting Text, widget: text, required: false }
+                  - { name: cta_text, label: CTA Button Text, widget: string, required: false }
+                  - { name: cta_href, label: CTA Button Link, widget: string, required: false }
+          - name: translations
+            label: Translations
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: es
+                label: Spanish (es)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: tagline, label: Tagline, widget: string, required: false }
+                  - { name: supporting, label: Supporting Text, widget: text, required: false }
+                  - { name: cta_text, label: CTA Button Text, widget: string, required: false }
+              - name: hmn
+                label: Hmong (hmn)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: tagline, label: Tagline, widget: string, required: false }
+                  - { name: supporting, label: Supporting Text, widget: text, required: false }
+                  - { name: cta_text, label: CTA Button Text, widget: string, required: false }
+              - name: ar
+                label: Arabic (ar)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: tagline, label: Tagline, widget: string, required: false }
+                  - { name: supporting, label: Supporting Text, widget: text, required: false }
+                  - { name: cta_text, label: CTA Button Text, widget: string, required: false }
+              - name: de
+                label: German (de)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: tagline, label: Tagline, widget: string, required: false }
+                  - { name: supporting, label: Supporting Text, widget: text, required: false }
+                  - { name: cta_text, label: CTA Button Text, widget: string, required: false }
+              - name: pl
+                label: Polish (pl)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: tagline, label: Tagline, widget: string, required: false }
+                  - { name: supporting, label: Supporting Text, widget: text, required: false }
+                  - { name: cta_text, label: CTA Button Text, widget: string, required: false }
 
       - name: about
         label: About Page
@@ -67,6 +294,108 @@ collections:
               - { name: name, label: Value Name, widget: string }
               - { name: description, label: Description, widget: text }
           - { name: nonprofit_info, label: Nonprofit Info, widget: text }
+          - name: overrides
+            label: Lens Overrides
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: technical
+                label: Technical Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: narrative, label: Narrative, widget: text, required: false }
+                  - { name: founder_story, label: Founder Story, widget: text, required: false }
+                  - { name: codex, label: Codex Description, widget: text, required: false }
+                  - { name: nonprofit_info, label: Nonprofit Info, widget: text, required: false }
+              - name: civic
+                label: Civic Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: narrative, label: Narrative, widget: text, required: false }
+                  - { name: founder_story, label: Founder Story, widget: text, required: false }
+                  - { name: codex, label: Codex Description, widget: text, required: false }
+                  - { name: nonprofit_info, label: Nonprofit Info, widget: text, required: false }
+              - name: supporter
+                label: Supporter Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: narrative, label: Narrative, widget: text, required: false }
+                  - { name: founder_story, label: Founder Story, widget: text, required: false }
+                  - { name: codex, label: Codex Description, widget: text, required: false }
+                  - { name: nonprofit_info, label: Nonprofit Info, widget: text, required: false }
+              - name: gamer
+                label: Gamer Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: narrative, label: Narrative, widget: text, required: false }
+                  - { name: founder_story, label: Founder Story, widget: text, required: false }
+                  - { name: codex, label: Codex Description, widget: text, required: false }
+                  - { name: nonprofit_info, label: Nonprofit Info, widget: text, required: false }
+          - name: translations
+            label: Translations
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: es
+                label: Spanish (es)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: narrative, label: Narrative, widget: text, required: false }
+                  - { name: founder_story, label: Founder Story, widget: text, required: false }
+                  - { name: codex, label: Codex Description, widget: text, required: false }
+                  - { name: nonprofit_info, label: Nonprofit Info, widget: text, required: false }
+              - name: hmn
+                label: Hmong (hmn)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: narrative, label: Narrative, widget: text, required: false }
+                  - { name: founder_story, label: Founder Story, widget: text, required: false }
+                  - { name: codex, label: Codex Description, widget: text, required: false }
+                  - { name: nonprofit_info, label: Nonprofit Info, widget: text, required: false }
+              - name: ar
+                label: Arabic (ar)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: narrative, label: Narrative, widget: text, required: false }
+                  - { name: founder_story, label: Founder Story, widget: text, required: false }
+                  - { name: codex, label: Codex Description, widget: text, required: false }
+                  - { name: nonprofit_info, label: Nonprofit Info, widget: text, required: false }
+              - name: de
+                label: German (de)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: narrative, label: Narrative, widget: text, required: false }
+                  - { name: founder_story, label: Founder Story, widget: text, required: false }
+                  - { name: codex, label: Codex Description, widget: text, required: false }
+                  - { name: nonprofit_info, label: Nonprofit Info, widget: text, required: false }
+              - name: pl
+                label: Polish (pl)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: narrative, label: Narrative, widget: text, required: false }
+                  - { name: founder_story, label: Founder Story, widget: text, required: false }
+                  - { name: codex, label: Codex Description, widget: text, required: false }
+                  - { name: nonprofit_info, label: Nonprofit Info, widget: text, required: false }
 
       - name: community
         label: Community Page
@@ -77,6 +406,117 @@ collections:
           - { name: how_it_works, label: How It Works, widget: text }
           - { name: gamesgiving, label: Gamesgiving, widget: text }
           - { name: invitation, label: Invitation, widget: text }
+          - name: overrides
+            label: Lens Overrides
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: technical
+                label: Technical Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: concept, label: Concept, widget: text, required: false }
+                  - { name: gamers_origin, label: Gamers Origin, widget: text, required: false }
+                  - { name: how_it_works, label: How It Works, widget: text, required: false }
+                  - { name: gamesgiving, label: Gamesgiving, widget: text, required: false }
+                  - { name: invitation, label: Invitation, widget: text, required: false }
+              - name: civic
+                label: Civic Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: concept, label: Concept, widget: text, required: false }
+                  - { name: gamers_origin, label: Gamers Origin, widget: text, required: false }
+                  - { name: how_it_works, label: How It Works, widget: text, required: false }
+                  - { name: gamesgiving, label: Gamesgiving, widget: text, required: false }
+                  - { name: invitation, label: Invitation, widget: text, required: false }
+              - name: supporter
+                label: Supporter Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: concept, label: Concept, widget: text, required: false }
+                  - { name: gamers_origin, label: Gamers Origin, widget: text, required: false }
+                  - { name: how_it_works, label: How It Works, widget: text, required: false }
+                  - { name: gamesgiving, label: Gamesgiving, widget: text, required: false }
+                  - { name: invitation, label: Invitation, widget: text, required: false }
+              - name: gamer
+                label: Gamer Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: concept, label: Concept, widget: text, required: false }
+                  - { name: gamers_origin, label: Gamers Origin, widget: text, required: false }
+                  - { name: how_it_works, label: How It Works, widget: text, required: false }
+                  - { name: gamesgiving, label: Gamesgiving, widget: text, required: false }
+                  - { name: invitation, label: Invitation, widget: text, required: false }
+          - name: translations
+            label: Translations
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: es
+                label: Spanish (es)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: concept, label: Concept, widget: text, required: false }
+                  - { name: gamers_origin, label: Gamers Origin, widget: text, required: false }
+                  - { name: how_it_works, label: How It Works, widget: text, required: false }
+                  - { name: gamesgiving, label: Gamesgiving, widget: text, required: false }
+                  - { name: invitation, label: Invitation, widget: text, required: false }
+              - name: hmn
+                label: Hmong (hmn)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: concept, label: Concept, widget: text, required: false }
+                  - { name: gamers_origin, label: Gamers Origin, widget: text, required: false }
+                  - { name: how_it_works, label: How It Works, widget: text, required: false }
+                  - { name: gamesgiving, label: Gamesgiving, widget: text, required: false }
+                  - { name: invitation, label: Invitation, widget: text, required: false }
+              - name: ar
+                label: Arabic (ar)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: concept, label: Concept, widget: text, required: false }
+                  - { name: gamers_origin, label: Gamers Origin, widget: text, required: false }
+                  - { name: how_it_works, label: How It Works, widget: text, required: false }
+                  - { name: gamesgiving, label: Gamesgiving, widget: text, required: false }
+                  - { name: invitation, label: Invitation, widget: text, required: false }
+              - name: de
+                label: German (de)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: concept, label: Concept, widget: text, required: false }
+                  - { name: gamers_origin, label: Gamers Origin, widget: text, required: false }
+                  - { name: how_it_works, label: How It Works, widget: text, required: false }
+                  - { name: gamesgiving, label: Gamesgiving, widget: text, required: false }
+                  - { name: invitation, label: Invitation, widget: text, required: false }
+              - name: pl
+                label: Polish (pl)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: concept, label: Concept, widget: text, required: false }
+                  - { name: gamers_origin, label: Gamers Origin, widget: text, required: false }
+                  - { name: how_it_works, label: How It Works, widget: text, required: false }
+                  - { name: gamesgiving, label: Gamesgiving, widget: text, required: false }
+                  - { name: invitation, label: Invitation, widget: text, required: false }
 
       - name: donate
         label: Donate Page
@@ -94,6 +534,99 @@ collections:
           - { name: disclosure, label: Tax Disclosure, widget: text }
           - { name: ein, label: EIN, widget: string }
           - { name: ein_note, label: EIN Note, widget: string, required: false, hint: "e.g. 'pending IRS determination' — leave blank once confirmed" }
+          - name: overrides
+            label: Lens Overrides
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: technical
+                label: Technical Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: impact, label: Impact Statement, widget: text, required: false }
+                  - { name: what_funds, label: What Your Donation Funds, widget: text, required: false }
+                  - { name: disclosure, label: Tax Disclosure, widget: text, required: false }
+              - name: civic
+                label: Civic Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: impact, label: Impact Statement, widget: text, required: false }
+                  - { name: what_funds, label: What Your Donation Funds, widget: text, required: false }
+                  - { name: disclosure, label: Tax Disclosure, widget: text, required: false }
+              - name: supporter
+                label: Supporter Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: impact, label: Impact Statement, widget: text, required: false }
+                  - { name: what_funds, label: What Your Donation Funds, widget: text, required: false }
+                  - { name: disclosure, label: Tax Disclosure, widget: text, required: false }
+              - name: gamer
+                label: Gamer Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: impact, label: Impact Statement, widget: text, required: false }
+                  - { name: what_funds, label: What Your Donation Funds, widget: text, required: false }
+                  - { name: disclosure, label: Tax Disclosure, widget: text, required: false }
+          - name: translations
+            label: Translations
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: es
+                label: Spanish (es)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: impact, label: Impact Statement, widget: text, required: false }
+                  - { name: what_funds, label: What Your Donation Funds, widget: text, required: false }
+                  - { name: disclosure, label: Tax Disclosure, widget: text, required: false }
+              - name: hmn
+                label: Hmong (hmn)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: impact, label: Impact Statement, widget: text, required: false }
+                  - { name: what_funds, label: What Your Donation Funds, widget: text, required: false }
+                  - { name: disclosure, label: Tax Disclosure, widget: text, required: false }
+              - name: ar
+                label: Arabic (ar)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: impact, label: Impact Statement, widget: text, required: false }
+                  - { name: what_funds, label: What Your Donation Funds, widget: text, required: false }
+                  - { name: disclosure, label: Tax Disclosure, widget: text, required: false }
+              - name: de
+                label: German (de)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: impact, label: Impact Statement, widget: text, required: false }
+                  - { name: what_funds, label: What Your Donation Funds, widget: text, required: false }
+                  - { name: disclosure, label: Tax Disclosure, widget: text, required: false }
+              - name: pl
+                label: Polish (pl)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: impact, label: Impact Statement, widget: text, required: false }
+                  - { name: what_funds, label: What Your Donation Funds, widget: text, required: false }
+                  - { name: disclosure, label: Tax Disclosure, widget: text, required: false }
 
       - name: contact
         label: Contact Page
@@ -101,10 +634,936 @@ collections:
         fields:
           - { name: intro, label: Intro Text, widget: text }
           - { name: direct_info, label: Direct Contact Info, widget: text }
+          - name: overrides
+            label: Lens Overrides
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: technical
+                label: Technical Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: intro, label: Intro Text, widget: text, required: false }
+                  - { name: direct_info, label: Direct Contact Info, widget: text, required: false }
+              - name: civic
+                label: Civic Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: intro, label: Intro Text, widget: text, required: false }
+                  - { name: direct_info, label: Direct Contact Info, widget: text, required: false }
+              - name: supporter
+                label: Supporter Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: intro, label: Intro Text, widget: text, required: false }
+                  - { name: direct_info, label: Direct Contact Info, widget: text, required: false }
+              - name: gamer
+                label: Gamer Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: intro, label: Intro Text, widget: text, required: false }
+                  - { name: direct_info, label: Direct Contact Info, widget: text, required: false }
+          - name: translations
+            label: Translations
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: es
+                label: Spanish (es)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: intro, label: Intro Text, widget: text, required: false }
+                  - { name: direct_info, label: Direct Contact Info, widget: text, required: false }
+              - name: hmn
+                label: Hmong (hmn)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: intro, label: Intro Text, widget: text, required: false }
+                  - { name: direct_info, label: Direct Contact Info, widget: text, required: false }
+              - name: ar
+                label: Arabic (ar)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: intro, label: Intro Text, widget: text, required: false }
+                  - { name: direct_info, label: Direct Contact Info, widget: text, required: false }
+              - name: de
+                label: German (de)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: intro, label: Intro Text, widget: text, required: false }
+                  - { name: direct_info, label: Direct Contact Info, widget: text, required: false }
+              - name: pl
+                label: Polish (pl)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: intro, label: Intro Text, widget: text, required: false }
+                  - { name: direct_info, label: Direct Contact Info, widget: text, required: false }
+
+  - name: legal
+    label: Legal Pages
+    files:
+      - name: privacy
+        label: Privacy Policy
+        file: src/lib/data/legal/privacy.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Meta Description, widget: text }
+          - { name: last_updated, label: Last Updated, widget: string, hint: "e.g. March 31, 2026" }
+          - { name: body, label: Body (Markdown), widget: markdown }
+      - name: legal
+        label: Terms & Legal
+        file: src/lib/data/legal/legal.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Meta Description, widget: text }
+          - { name: last_updated, label: Last Updated, widget: string, required: false, hint: "e.g. March 29, 2026" }
+          - { name: body, label: Body (Markdown), widget: markdown }
+      - name: tvn-legal
+        label: TVN Bridge Legal
+        file: src/lib/data/legal/tvn-legal.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Meta Description, widget: text }
+          - { name: last_updated, label: Last Updated, widget: string, hint: "e.g. March 28, 2026" }
+          - { name: body, label: Body (Markdown), widget: markdown }
+
+  - name: seo
+    label: SEO Metadata
+    files:
+      - name: main
+        label: Main Site SEO
+        file: src/lib/data/metadata.json
+        fields:
+          - name: site
+            label: Site-Wide
+            widget: object
+            fields:
+              - { name: title, label: Site Title, widget: string }
+              - { name: description, label: Site Description, widget: text }
+              - { name: url, label: Canonical URL, widget: string }
+              - { name: image, label: Default OG Image URL, widget: string }
+              - { name: author, label: Author, widget: string }
+              - name: keywords
+                label: Site-Wide Keywords
+                widget: list
+                field: { name: keyword, widget: string }
+          - name: pages
+            label: Per-Page SEO
+            widget: object
+            hint: "Each key (home, about, donate, etc.) maps to a route. Edit titles, descriptions, and keywords per page."
+            fields:
+              - name: home
+                label: Home (/)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+              - name: about
+                label: About (/about)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+              - name: donate
+                label: Donate (/donate)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+              - name: projects
+                label: Projects (/projects)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+              - name: community
+                label: Community (/community)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+              - name: contact
+                label: Contact (/contact)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+              - name: privacy
+                label: Privacy (/privacy)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+              - name: legal
+                label: Legal (/legal)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+              - name: blog
+                label: Blog (/blog)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+              - name: open-source
+                label: Open Source (/open-source)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+              - name: hub
+                label: Hub (/hub)
+                widget: object
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - name: keywords
+                    label: Keywords
+                    widget: list
+                    field: { name: keyword, widget: string }
+      - name: tvn
+        label: TVN Bridge SEO
+        file: src/lib/data/tvn/metadata.json
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Description, widget: text }
+          - { name: url, label: Canonical URL, widget: string }
+          - { name: image, label: OG Image URL, widget: string }
+          - { name: author, label: Author, widget: string }
+          - name: keywords
+            label: Keywords
+            widget: list
+            field: { name: keyword, widget: string }
+
+  - name: ask
+    label: Ask AI Page
+    files:
+      - name: ask-context
+        label: Ask AI Content + Context
+        file: src/lib/data/ask-context.json
+        fields:
+          - { name: hero_title, label: Hero Title, widget: string }
+          - { name: hero_intro, label: Hero Intro, widget: text }
+          - { name: hero_note, label: Hero Note (No API keys...), widget: text }
+          - { name: hero_note_clipboard, label: Hero Note (Clipboard caveat), widget: text }
+          - { name: question_label, label: Question Label, widget: string }
+          - { name: question_placeholder, label: Question Placeholder, widget: text }
+          - { name: model_label, label: Model Picker Label, widget: string }
+          - { name: copied_message, label: Copied Message, widget: string }
+          - { name: how_it_works_heading, label: "How it works — heading", widget: string }
+          - { name: how_it_works_url, label: "How it works — URL models", widget: text, hint: "Use {model} as placeholder" }
+          - { name: how_it_works_clipboard, label: "How it works — clipboard models", widget: text, hint: "Use {model} as placeholder" }
+          - { name: how_it_works_footer, label: "How it works — footer", widget: text, hint: "Use {lens} as placeholder" }
+          - { name: context_section_title, label: Context Section Title, widget: string }
+          - { name: context_section_intro, label: Context Section Intro, widget: text }
+          - name: models
+            label: AI Models
+            widget: list
+            fields:
+              - { name: id, label: ID, widget: string }
+              - { name: name, label: Display Name, widget: string }
+              - { name: icon, label: Icon (emoji), widget: string }
+              - { name: url_support, label: Supports URL Query Param, widget: boolean, default: false }
+              - { name: url, label: URL, widget: string, hint: "For url_support=true, use {prompt} as placeholder" }
+          - name: lens_cards
+            label: Lens Cards (context preview)
+            widget: list
+            fields:
+              - { name: icon, label: Icon (emoji), widget: string }
+              - { name: name, label: Lens Name, widget: string }
+              - { name: description, label: Description, widget: text }
+          - { name: base_context, label: Base AI Context (always sent), widget: text, hint: "This is the main context string sent to every AI model. Edit freely — affects all lenses." }
+          - name: lens_suffixes
+            label: Lens-Specific Context Suffixes
+            widget: object
+            hint: "Text appended to base context based on active lens"
+            fields:
+              - { name: technical, label: Technical Lens, widget: text }
+              - { name: civic, label: Civic Lens, widget: text }
+              - { name: supporter, label: Supporter Lens, widget: text }
+              - { name: gamer, label: Gamer Lens, widget: text }
+
+  - name: strings
+    label: Global Strings (Errors / Badges)
+    files:
+      - name: strings
+        label: Global Strings
+        file: src/lib/data/strings.json
+        fields:
+          - name: error_page
+            label: Error Pages (404 / 500 / fallback)
+            widget: object
+            collapsed: true
+            fields:
+              - name: "404"
+                label: "404 — Page Not Found"
+                widget: object
+                fields:
+                  - { name: heading, label: Heading, widget: string }
+                  - { name: body, label: Body, widget: text }
+                  - { name: back_button, label: Back Button Label, widget: string }
+              - name: "500"
+                label: "500 — Server Error"
+                widget: object
+                fields:
+                  - { name: heading, label: Heading, widget: string }
+                  - { name: body, label: Body, widget: text }
+                  - { name: back_button, label: Back Button Label, widget: string }
+              - name: default
+                label: "Default — any other error"
+                widget: object
+                fields:
+                  - { name: heading, label: Heading, widget: string }
+                  - { name: body, label: Body, widget: text }
+                  - { name: back_button, label: Back Button Label, widget: string }
+          - name: status_badges
+            label: Project Status Badges
+            widget: object
+            collapsed: true
+            hint: "Labels for project status badges. Keys match the status select values."
+            fields:
+              - { name: active, label: Active, widget: string }
+              - { name: alpha, label: Alpha, widget: string }
+              - { name: in_development, label: In Development, widget: string }
+              - { name: draft_framework, label: Draft Framework, widget: string }
+              - { name: prototype, label: Prototype, widget: string }
+              - { name: patent_pending, label: Patent Pending, widget: string }
+              - { name: concept, label: Concept, widget: string }
+              - { name: live, label: "LIVE indicator (No Solos demo)", widget: string }
+
+  - name: no-solos
+    label: No Solos Alpha Page
+    files:
+      - name: no-solos
+        label: No Solos Alpha Content
+        file: src/lib/data/no-solos.json
+        fields:
+          - { name: meta_title, label: Meta Title, widget: string }
+          - { name: meta_description, label: Meta Description, widget: text }
+          - { name: hero_heading, label: Hero Heading, widget: string }
+          - { name: hero_intro, label: Hero Intro, widget: text }
+          - { name: hero_badge, label: Hero Badge Text, widget: string }
+          - name: demo
+            label: Demo Section (Live + Demo states)
+            widget: object
+            collapsed: true
+            fields:
+              - { name: section_title_live, label: "Section Title — Live", widget: string }
+              - { name: section_title_demo, label: "Section Title — Demo", widget: string }
+              - { name: section_blurb_live, label: "Section Blurb — Live", widget: text }
+              - { name: section_blurb_demo, label: "Section Blurb — Demo", widget: text }
+              - { name: button_label_live, label: "Button Label — Live", widget: string }
+              - { name: button_label_demo, label: "Button Label — Demo", widget: string }
+              - { name: viewer_title_live, label: "Viewer Title — Live", widget: string }
+              - { name: viewer_title_demo, label: "Viewer Title — Demo", widget: string }
+              - { name: iframe_title_live, label: "Iframe Title — Live (a11y)", widget: string }
+              - { name: iframe_title_demo, label: "Iframe Title — Demo (a11y)", widget: string }
+              - { name: close_live, label: "Close Button — Live", widget: string }
+              - { name: close_demo, label: "Close Button — Demo", widget: string }
+              - { name: ai_music_note_before_link, label: AI Music Note (before link), widget: text }
+              - { name: ai_music_note_link_text, label: AI Music Note (link text), widget: string }
+              - { name: ai_music_note_after_link, label: AI Music Note (after link), widget: string }
+          - name: what_it_is
+            label: "Section: What It Is"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - name: paragraphs
+                label: Paragraphs
+                widget: list
+                field: { name: paragraph, widget: text }
+          - name: for_the_curious
+            label: "Section: For the Curious"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - name: paragraphs
+                label: Paragraphs
+                widget: list
+                field: { name: paragraph, widget: text }
+          - name: how_it_works
+            label: "Section: How It Works"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - name: cards
+                label: Cards
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+          - name: under_the_hood
+            label: "Section: Under the Hood"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - name: paragraphs
+                label: Paragraphs
+                widget: list
+                field: { name: paragraph, widget: text }
+          - name: how_we_built_it
+            label: "Section: How We Built It"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - name: paragraphs
+                label: Paragraphs
+                widget: list
+                field: { name: paragraph, widget: text }
+          - name: why_a_nonprofit
+            label: "Section: Why a Nonprofit Made a Game"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - name: paragraphs
+                label: Paragraphs
+                widget: list
+                field: { name: paragraph, widget: text }
+          - name: whats_next
+            label: "Section: What's Next"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - name: cards
+                label: Cards
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+              - { name: footer, label: Footer Text, widget: text }
+          - name: cta
+            label: "Section: CTA"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: tagline, label: Tagline, widget: string }
+              - { name: back_button_label, label: Back Button Label, widget: string }
+              - { name: back_button_href, label: Back Button URL, widget: string }
+              - { name: support_button_label, label: Support Button Label, widget: string }
+              - { name: support_button_href, label: Support Button URL, widget: string }
+
+  - name: tvn-pages
+    label: TVN Sub-pages (Signup / Vault / TSP)
+    files:
+      - name: tvn-pages
+        label: TVN Signup + Vault + TSP Content
+        file: src/lib/data/tvn/pages.json
+        fields:
+          - name: signup
+            label: Signup / Waitlist Page
+            widget: object
+            collapsed: true
+            fields:
+              - { name: meta_title, label: Meta Title, widget: string }
+              - { name: meta_description, label: Meta Description, widget: text }
+              - { name: success_heading, label: Success Heading, widget: string }
+              - { name: success_body, label: Success Body, widget: text }
+              - { name: success_button, label: Success Button Label, widget: string }
+              - { name: landing_heading, label: Landing Heading, widget: string }
+              - name: landing_intro_paragraphs
+                label: Landing Intro Paragraphs
+                widget: list
+                field: { name: paragraph, widget: text }
+              - { name: survey_card_icon, label: Survey Card Icon, widget: string }
+              - { name: survey_card_title, label: Survey Card Title, widget: string }
+              - { name: survey_card_body, label: Survey Card Body, widget: text }
+              - { name: quick_card_icon, label: Quick Card Icon, widget: string }
+              - { name: quick_card_title, label: Quick Card Title, widget: string }
+              - { name: quick_card_body, label: Quick Card Body, widget: text }
+              - { name: privacy_note_before_link, label: Privacy Note (before link), widget: string }
+              - { name: privacy_note_link_text, label: Privacy Note (link text), widget: string }
+              - { name: back_label, label: Back Button Label, widget: string }
+              - { name: quick_heading, label: Quick Form Heading, widget: string }
+              - { name: quick_intro, label: Quick Form Intro, widget: text }
+              - { name: quick_submit_label, label: Quick Submit Label, widget: string }
+              - { name: quick_submitting_label, label: Quick Submitting Label, widget: string }
+              - { name: survey_heading, label: Survey Form Heading, widget: string }
+              - { name: survey_intro, label: Survey Form Intro, widget: text }
+              - { name: survey_submit_label, label: Survey Submit Label, widget: string }
+              - { name: survey_submitting_label, label: Survey Submitting Label, widget: string }
+              - { name: name_label, label: Name Label, widget: string }
+              - { name: name_placeholder, label: Name Placeholder, widget: string }
+              - { name: email_label, label: Email Label, widget: string }
+              - { name: email_placeholder, label: Email Placeholder, widget: string }
+              - { name: role_legend, label: "Role — Legend", widget: string }
+              - name: role_options
+                label: "Role — Options"
+                widget: list
+                field: { name: option, widget: string }
+              - { name: role_other_placeholder, label: "Role — Other Placeholder", widget: string }
+              - { name: tools_legend, label: "Tools — Legend", widget: string }
+              - name: tools_options
+                label: "Tools — Options"
+                widget: list
+                field: { name: option, widget: string }
+              - { name: tools_other_placeholder, label: "Tools — Other Placeholder", widget: string }
+              - { name: concern_legend, label: "Concern — Legend", widget: string }
+              - name: concern_options
+                label: "Concern — Options"
+                widget: list
+                field: { name: option, widget: string }
+              - { name: concern_other_placeholder, label: "Concern — Other Placeholder", widget: string }
+              - { name: feature_legend, label: "Feature — Legend", widget: string }
+              - name: feature_options
+                label: "Feature — Options"
+                widget: list
+                field: { name: option, widget: string }
+              - { name: feature_other_placeholder, label: "Feature — Other Placeholder", widget: string }
+              - { name: usecase_label, label: Use Case Label, widget: string }
+              - { name: usecase_placeholder, label: Use Case Placeholder, widget: string }
+              - { name: tier_legend, label: "Tier — Legend", widget: string }
+              - name: tier_options
+                label: "Tier — Options"
+                widget: list
+                field: { name: option, widget: string }
+              - { name: governance_label, label: Governance Label, widget: string }
+              - { name: governance_placeholder, label: Governance Placeholder, widget: string }
+              - { name: error_verification, label: "Error — Verification Required", widget: string }
+              - { name: error_generic, label: "Error — Generic", widget: string }
+              - { name: error_network, label: "Error — Network", widget: string }
+          - name: vault
+            label: Vault Product Page
+            widget: object
+            collapsed: true
+            fields:
+              - { name: meta_title, label: Meta Title, widget: string }
+              - { name: meta_description, label: Meta Description, widget: text }
+              - { name: hero_heading, label: Hero Heading, widget: string }
+              - { name: hero_intro, label: Hero Intro, widget: text }
+              - { name: hero_subnote, label: Hero Subnote, widget: string }
+              - { name: hero_primary_button, label: Hero Primary Button, widget: string }
+              - { name: hero_primary_href, label: Hero Primary URL, widget: string }
+              - { name: hero_secondary_button, label: Hero Secondary Button, widget: string }
+              - { name: hero_secondary_href, label: Hero Secondary URL, widget: string }
+              - { name: features_heading, label: Features Heading, widget: string }
+              - name: features
+                label: Feature Cards
+                widget: list
+                fields:
+                  - { name: icon, label: Icon (HTML entity or emoji), widget: string }
+                  - { name: name, label: Name, widget: string }
+                  - { name: description, label: Description, widget: text }
+              - { name: security_heading, label: Security Heading, widget: string }
+              - { name: security_intro, label: Security Intro, widget: text }
+              - name: security_items
+                label: Security Items
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+              - { name: defense_heading, label: Defense Heading, widget: string }
+              - { name: defense_intro, label: Defense Intro, widget: text }
+              - name: defense_layers
+                label: Defense Layers
+                widget: list
+                fields:
+                  - { name: n, label: Layer Number, widget: string }
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+              - { name: wayfinder_heading, label: Wayfinder Heading, widget: string }
+              - { name: wayfinder_body_before_bold, label: Wayfinder (before bold), widget: string, required: false }
+              - { name: wayfinder_body_bold, label: Wayfinder (bold text), widget: string }
+              - { name: wayfinder_body_after_bold, label: Wayfinder (after bold), widget: text }
+              - { name: whats_next_heading, label: What's Next Heading, widget: string }
+              - { name: whats_next_intro, label: What's Next Intro, widget: text }
+              - name: whats_next_items
+                label: What's Next Items
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+              - { name: cta_heading, label: CTA Heading, widget: string }
+              - { name: cta_body, label: CTA Body, widget: text }
+              - { name: cta_button, label: CTA Button, widget: string }
+              - { name: cta_href, label: CTA URL, widget: string }
+              - { name: version_note, label: Version Note, widget: string }
+          - name: tsp
+            label: TSP Protocol Page
+            widget: object
+            collapsed: true
+            fields:
+              - { name: meta_title, label: Meta Title, widget: string }
+              - { name: meta_description, label: Meta Description, widget: text }
+              - { name: hero_heading, label: Hero Heading, widget: string }
+              - { name: hero_intro, label: Hero Intro, widget: text }
+              - { name: why_heading, label: Why Heading, widget: string }
+              - { name: why_body, label: Why Body, widget: text }
+              - { name: handshake_heading, label: Handshake Heading, widget: string }
+              - { name: handshake_intro, label: Handshake Intro, widget: text }
+              - name: handshake_steps
+                label: Handshake Steps
+                widget: list
+                fields:
+                  - { name: n, label: Step Number, widget: string }
+                  - { name: title, label: Title, widget: string }
+                  - { name: body_html, label: Body (HTML allowed), widget: text }
+              - { name: frames_heading, label: Frames Heading, widget: string }
+              - { name: frames_intro, label: Frames Intro, widget: text }
+              - { name: frame_format_heading, label: Frame Format Heading, widget: string }
+              - name: frame_format_parts
+                label: Frame Format Parts
+                widget: list
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: color, label: Color, widget: select, options: ["accent", "info", "warning", "success", "error"] }
+              - name: frame_properties
+                label: Frame Properties
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: body_html, label: Body (HTML allowed), widget: text }
+              - { name: kill_switch_heading, label: Kill Switch Heading, widget: string }
+              - { name: kill_switch_lead_html, label: Kill Switch Lead (HTML), widget: text }
+              - { name: kill_switch_body_html, label: Kill Switch Body (HTML), widget: text }
+              - { name: summary_heading, label: Summary Heading, widget: string }
+              - name: summary_items
+                label: Summary Items
+                widget: list
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: value, label: Value, widget: text }
+              - { name: cta_heading, label: CTA Heading, widget: string }
+              - { name: cta_body, label: CTA Body, widget: text }
+              - { name: cta_button, label: CTA Button, widget: string }
+              - { name: cta_href, label: CTA URL, widget: string }
+              - { name: version_note, label: Version Note, widget: string }
+
+  - name: tvn-perspectives
+    label: TVN Landing Page (Lens System)
+    files:
+      - name: perspectives
+        label: TVN Base Content + Lens Overrides
+        file: src/lib/data/tvn/perspectives.json
+        fields:
+          - name: lensMeta
+            label: Lens Pills (selector buttons)
+            widget: list
+            fields:
+              - { name: id, label: Lens ID, widget: string, hint: "developer / environmental / privacy / ethics" }
+              - { name: label, label: Pill Label, widget: string }
+              - { name: icon, label: Pill Icon (emoji), widget: string }
+          - name: base
+            label: Base Content (Developer Lens)
+            widget: object
+            collapsed: true
+            hint: "The default content shown when Developer lens is active. Other lenses inherit these and override selectively."
+            fields:
+              - { name: heroTagline, label: Hero Tagline, widget: text }
+              - name: features
+                label: Feature Cards
+                widget: list
+                fields:
+                  - { name: icon, label: "Icon (HTML entity like &#128737; or emoji)", widget: string }
+                  - { name: name, label: Feature Name, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - { name: badge, label: Badge (optional), widget: string, required: false }
+              - name: stats
+                label: Stats Bar
+                widget: list
+                fields:
+                  - { name: value, label: Value (e.g. 90-97%), widget: string }
+                  - { name: label, label: Label, widget: string }
+              - name: faqs
+                label: FAQs
+                widget: list
+                fields:
+                  - { name: question, label: Question, widget: string }
+                  - { name: answer, label: Answer, widget: text }
+              - name: cta
+                label: Final CTA
+                widget: object
+                fields:
+                  - { name: headline, label: Headline, widget: string }
+                  - { name: description, label: Description, widget: text }
+              - name: comparison
+                label: Before/After Comparison Rows
+                widget: list
+                fields:
+                  - { name: without, label: "Without TVN", widget: text }
+                  - { name: with, label: "With TVN", widget: text }
+              - name: costSavings
+                label: Cost Savings Callout
+                widget: object
+                fields:
+                  - { name: headline, label: Headline, widget: string }
+                  - { name: description, label: Description, widget: text }
+                  - { name: footnote, label: Footnote, widget: text }
+              - name: personas
+                label: "Who It's For (Personas)"
+                widget: list
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: tagline, label: Tagline, widget: string }
+                  - { name: description, label: Description, widget: text }
+              - name: howItWorks
+                label: How It Works (steps)
+                widget: list
+                fields:
+                  - { name: step, label: Step Number, widget: number, value_type: int }
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+          - name: overrides
+            label: Lens Overrides (sparse — reframes per audience)
+            widget: object
+            collapsed: true
+            hint: "For each lens, edit the fields that should differ from the base. Per-feature/per-stat reframing requires editing the JSON directly (advanced)."
+            fields:
+              - name: developer
+                label: Developer Lens (no overrides — this lens IS the base)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: heroTagline, label: Hero Tagline Override (leave blank to use base), widget: text, required: false }
+              - name: environmental
+                label: Environmental Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: heroTagline, label: Hero Tagline, widget: text, required: false }
+                  - name: cta
+                    label: CTA Override
+                    widget: object
+                    required: false
+                    fields:
+                      - { name: headline, label: Headline, widget: string, required: false }
+                      - { name: description, label: Description, widget: text, required: false }
+                  - name: costSavings
+                    label: Cost Savings Override
+                    widget: object
+                    required: false
+                    fields:
+                      - { name: headline, label: Headline, widget: string, required: false }
+                      - { name: description, label: Description, widget: text, required: false }
+                      - { name: footnote, label: Footnote, widget: text, required: false }
+                  - name: extraFaqs
+                    label: Extra FAQs (appended for this lens)
+                    widget: list
+                    required: false
+                    fields:
+                      - { name: question, label: Question, widget: string }
+                      - { name: answer, label: Answer, widget: text }
+              - name: privacy
+                label: Privacy Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: heroTagline, label: Hero Tagline, widget: text, required: false }
+                  - name: cta
+                    label: CTA Override
+                    widget: object
+                    required: false
+                    fields:
+                      - { name: headline, label: Headline, widget: string, required: false }
+                      - { name: description, label: Description, widget: text, required: false }
+                  - name: costSavings
+                    label: Cost Savings Override
+                    widget: object
+                    required: false
+                    fields:
+                      - { name: headline, label: Headline, widget: string, required: false }
+                      - { name: description, label: Description, widget: text, required: false }
+                      - { name: footnote, label: Footnote, widget: text, required: false }
+                  - name: extraFaqs
+                    label: Extra FAQs (appended for this lens)
+                    widget: list
+                    required: false
+                    fields:
+                      - { name: question, label: Question, widget: string }
+                      - { name: answer, label: Answer, widget: text }
+              - name: ethics
+                label: Ethics Lens
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: heroTagline, label: Hero Tagline, widget: text, required: false }
+                  - name: cta
+                    label: CTA Override
+                    widget: object
+                    required: false
+                    fields:
+                      - { name: headline, label: Headline, widget: string, required: false }
+                      - { name: description, label: Description, widget: text, required: false }
+                  - name: costSavings
+                    label: Cost Savings Override
+                    widget: object
+                    required: false
+                    fields:
+                      - { name: headline, label: Headline, widget: string, required: false }
+                      - { name: description, label: Description, widget: text, required: false }
+                      - { name: footnote, label: Footnote, widget: text, required: false }
+                  - name: extraFaqs
+                    label: Extra FAQs (appended for this lens)
+                    widget: list
+                    required: false
+                    fields:
+                      - { name: question, label: Question, widget: string }
+                      - { name: answer, label: Answer, widget: text }
+
+  - name: ui-copy
+    label: UI Copy (Headings / Buttons / Labels)
+    files:
+      - name: ui-copy
+        label: Section Headings & Button Labels
+        file: src/lib/data/ui-copy.json
+        fields:
+          - name: home
+            label: Homepage
+            widget: object
+            collapsed: true
+            fields:
+              - { name: mission_heading, label: Mission Heading, widget: string }
+              - { name: mission_button, label: Mission CTA Button, widget: string }
+              - { name: spotlight_heading, label: Project Spotlight Heading, widget: string }
+              - { name: spotlight_learn_more_button, label: "Spotlight — Learn More Button", widget: string }
+              - { name: spotlight_learn_more_href, label: "Spotlight — Learn More Link", widget: string }
+              - { name: spotlight_all_projects_button, label: "Spotlight — All Projects Button", widget: string }
+              - { name: blog_heading, label: Blog Heading, widget: string }
+              - { name: blog_button, label: Blog CTA Button, widget: string }
+              - { name: cta_heading, label: Final CTA Heading, widget: string }
+              - { name: cta_body, label: Final CTA Body, widget: text }
+              - { name: cta_button, label: Final CTA Button, widget: string }
+          - name: projects
+            label: Projects Page
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Page Heading, widget: string }
+              - { name: intro, label: Intro Paragraph, widget: text }
+              - { name: featured_label, label: Featured Label, widget: string }
+              - { name: cta_heading, label: CTA Heading, widget: string }
+              - { name: cta_body, label: CTA Body, widget: text }
+              - { name: cta_button, label: CTA Button, widget: string }
+          - name: community
+            label: Community Page
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Page Heading, widget: string }
+              - { name: gamers_first_heading, label: "Section: Gamers First Heading", widget: string }
+              - { name: how_it_works_heading, label: "Section: How It Works Heading", widget: string }
+              - { name: gamesgiving_heading, label: "Section: Gamesgiving Heading", widget: string }
+              - { name: get_involved_heading, label: "Section: Get Involved Heading", widget: string }
+              - { name: reach_out_button, label: Reach Out Button, widget: string }
+          - name: team
+            label: Team Page
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Page Heading, widget: string }
+              - { name: leadership_heading, label: Leadership Heading, widget: string }
+              - { name: board_heading, label: Board Heading, widget: string }
+              - { name: board_body, label: Board Body, widget: text }
+              - { name: board_button, label: Board Button, widget: string }
+              - { name: volunteer_heading, label: Volunteer Heading, widget: string }
+              - { name: volunteer_body, label: Volunteer Body, widget: text }
+              - { name: volunteer_button, label: Volunteer Button, widget: string }
+              - { name: governance_heading, label: Governance Heading, widget: string }
+              - { name: governance_body, label: Governance Body, widget: text }
+              - { name: governance_table_policy, label: "Governance Table — Policy Column", widget: string }
+              - { name: governance_table_status, label: "Governance Table — Status Column", widget: string }
+              - { name: governance_footer_before_link, label: Governance Footer (before link), widget: string }
+              - { name: governance_footer_link_text, label: Governance Footer (link text), widget: string }
+              - { name: governance_footer_after_link, label: Governance Footer (after link), widget: string }
+          - name: hub
+            label: Hub Page
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heading, label: Page Heading, widget: string }
+              - { name: no_solos_heading, label: No Solos Section Heading, widget: string }
+              - { name: no_solos_intro_live, label: "No Solos — Live Intro", widget: text }
+              - { name: no_solos_intro_demo, label: "No Solos — Demo Intro", widget: text }
+              - { name: no_solos_viewer_live, label: "No Solos — Viewer Title (Live)", widget: string }
+              - { name: no_solos_viewer_demo, label: "No Solos — Viewer Title (Demo)", widget: string }
+              - { name: no_solos_close_live, label: "No Solos — Close Button (Live)", widget: string }
+              - { name: no_solos_close_demo, label: "No Solos — Close Button (Demo)", widget: string }
+              - { name: survey_heading, label: Survey Heading, widget: string }
+              - { name: survey_body, label: Survey Body, widget: text }
+              - { name: artists_heading, label: Artists Heading, widget: string }
+              - { name: artists_body, label: Artists Body, widget: text }
+              - { name: projects_heading, label: Projects Heading, widget: string }
+              - { name: discord_heading, label: Discord Heading, widget: string }
+              - { name: discord_body, label: Discord Body, widget: text }
+              - { name: open_source_heading, label: Open Source Heading, widget: string }
+              - { name: open_source_body, label: Open Source Body, widget: text }
+              - { name: open_source_button, label: Open Source Button, widget: string }
 
   - name: projects
     label: Projects
-    file: src/lib/data/projects.json
     files:
       - name: projects
         label: Project List
@@ -174,6 +1633,47 @@ collections:
                 label: Tags
                 widget: list
                 field: { name: tag, widget: string }
+          - name: translations
+            label: Translations
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - name: es
+                label: Spanish (es)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: about, label: Hub About Text, widget: text, required: false }
+              - name: hmn
+                label: Hmong (hmn)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: about, label: Hub About Text, widget: text, required: false }
+              - name: ar
+                label: Arabic (ar)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: about, label: Hub About Text, widget: text, required: false }
+              - name: de
+                label: German (de)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: about, label: Hub About Text, widget: text, required: false }
+              - name: pl
+                label: Polish (pl)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: about, label: Hub About Text, widget: text, required: false }
 
       - name: resources
         label: Resources / Downloads
@@ -238,3 +1738,93 @@ collections:
           - { name: og_image, label: OG Image, widget: image, hint: "Default social sharing image" }
           - { name: tvn_logo, label: TVN Logo, widget: image, required: false, hint: "Leave empty to show text — add image when logo is ready" }
           - { name: tvn_logo_size, label: TVN Logo Height (px), widget: string, default: "40", required: false, hint: "Height in pixels e.g. 32, 40, 48. Width scales automatically." }
+          - name: nav
+            label: Navigation
+            widget: object
+            collapsed: true
+            fields:
+              - name: rit
+                label: RIT Main Nav
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: brand, label: Brand Text (next to logo), widget: string }
+                  - name: links
+                    label: Nav Links
+                    widget: list
+                    fields:
+                      - { name: href, label: URL, widget: string }
+                      - { name: label, label: Label, widget: string }
+                  - { name: contact_label, label: Contact Label, widget: string }
+                  - { name: donate_label, label: Donate Button Label, widget: string }
+              - name: tvn
+                label: TVN Nav
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: brand_fallback_text, label: Brand Fallback Text (when no logo), widget: string }
+                  - { name: parent_link_text, label: Parent Link Text (next to brand), widget: string }
+                  - name: links
+                    label: Nav Links
+                    widget: list
+                    fields:
+                      - { name: href, label: URL, widget: string }
+                      - { name: label, label: Label, widget: string }
+                  - { name: waitlist_label, label: Waitlist Button Label, widget: string }
+          - name: footer
+            label: Footer
+            widget: object
+            collapsed: true
+            fields:
+              - name: rit
+                label: RIT Footer
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: brand_name, label: Brand Name, widget: string }
+                  - { name: brand_tagline, label: Brand Tagline, widget: text }
+                  - { name: links_heading, label: Links Heading, widget: string }
+                  - name: links
+                    label: Footer Links
+                    widget: list
+                    fields:
+                      - { name: href, label: URL, widget: string }
+                      - { name: label, label: Label, widget: string }
+                      - { name: external, label: Opens in New Tab, widget: boolean, default: false, required: false }
+                  - { name: support_heading, label: Support Column Heading, widget: string }
+                  - { name: support_body, label: Support Column Body, widget: text }
+                  - { name: donate_button, label: Donate Button Label, widget: string }
+                  - { name: github_iframe_src, label: GitHub Star Iframe Src (blank to hide), widget: string, required: false }
+                  - { name: copyright, label: Copyright Line, widget: string }
+                  - { name: ai_disclosure_before_link, label: AI Disclosure (before link), widget: text }
+                  - { name: ai_disclosure_link_text, label: AI Disclosure (link text), widget: string }
+                  - { name: ai_disclosure_after_link, label: AI Disclosure (after link), widget: string }
+              - name: tvn
+                label: TVN Footer
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: brand_name, label: Brand Name, widget: string }
+                  - { name: brand_tagline_line1, label: Tagline Line 1, widget: string }
+                  - { name: brand_tagline_line2, label: Tagline Line 2, widget: string }
+                  - { name: links_heading, label: Links Heading, widget: string }
+                  - name: links
+                    label: Footer Links
+                    widget: list
+                    fields:
+                      - { name: href, label: URL, widget: string }
+                      - { name: label, label: Label, widget: string }
+                  - { name: privacy_heading, label: Privacy Column Heading, widget: string }
+                  - name: privacy_links
+                    label: Privacy Links
+                    widget: list
+                    fields:
+                      - { name: href, label: URL, widget: string }
+                      - { name: label, label: Label, widget: string }
+                  - { name: copyright, label: Copyright Line, widget: string }
+                  - { name: parent_link_before, label: "Parent org — text before link", widget: string }
+                  - { name: parent_link_text, label: "Parent org — link text", widget: string }
+                  - { name: parent_link_after, label: "Parent org — text after link", widget: string }
+                  - { name: ai_disclosure_before_link, label: AI Disclosure (before link), widget: text }
+                  - { name: ai_disclosure_link_text, label: AI Disclosure (link text), widget: string }
+                  - { name: ai_disclosure_after_link, label: AI Disclosure (after link), widget: string }
