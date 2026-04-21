@@ -931,7 +931,7 @@ collections:
             widget: list
             fields:
               - { name: icon, label: Icon (emoji), widget: string }
-              - { name: name, label: Lens Name, widget: string }
+              - { name: title, label: Lens Title, widget: string }
               - { name: description, label: Description, widget: text }
           - { name: base_context, label: Base AI Context (always sent), widget: text, hint: "This is the main context string sent to every AI model. Edit freely — affects all lenses." }
           - name: lens_suffixes
@@ -1211,7 +1211,7 @@ collections:
                 widget: list
                 fields:
                   - { name: icon, label: Icon (HTML entity or emoji), widget: string }
-                  - { name: name, label: Name, widget: string }
+                  - { name: title, label: Title, widget: string }
                   - { name: description, label: Description, widget: text }
               - { name: security_heading, label: Security Heading, widget: string }
               - { name: security_intro, label: Security Intro, widget: text }
@@ -1324,7 +1324,7 @@ collections:
                 widget: list
                 fields:
                   - { name: icon, label: "Icon (HTML entity like &#128737; or emoji)", widget: string }
-                  - { name: name, label: Feature Name, widget: string }
+                  - { name: title, label: Feature Title, widget: string }
                   - { name: description, label: Description, widget: text }
                   - { name: badge, label: Badge (optional), widget: string, required: false }
               - name: stats
@@ -1573,13 +1573,90 @@ collections:
             label: Projects
             widget: list
             fields:
-              - { name: name, label: Name, widget: string }
+              - { name: title, label: Title, widget: string }
               - { name: description, label: Description, widget: text }
               - name: tags
                 label: Tags
                 widget: list
                 field: { name: tag, widget: string }
               - { name: status, label: Status, widget: select, options: ["Active", "In Development", "Prototype", "Concept", "Draft Framework", "Patent Pending"] }
+              - { name: url, label: URL (optional), widget: string, required: false, hint: "Internal path (e.g. /tvn) or full URL" }
+              - { name: featured, label: Featured (pin to top), widget: boolean, default: false, required: false }
+              - name: overrides
+                label: Lens Overrides (optional — reframes description per audience)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - name: technical
+                    label: Technical Lens
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: description, label: Description, widget: text, required: false }
+                  - name: civic
+                    label: Civic Lens
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: description, label: Description, widget: text, required: false }
+                  - name: supporter
+                    label: Supporter Lens
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: description, label: Description, widget: text, required: false }
+                  - name: gamer
+                    label: Gamer Lens
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: description, label: Description, widget: text, required: false }
+              - name: translations
+                label: Translations (optional — per-language description)
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - name: es
+                    label: Spanish (es)
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: description, label: Description, widget: text, required: false }
+                  - name: hmn
+                    label: Hmong (hmn)
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: description, label: Description, widget: text, required: false }
+                  - name: ar
+                    label: Arabic (ar)
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: description, label: Description, widget: text, required: false }
+                  - name: de
+                    label: German (de)
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: description, label: Description, widget: text, required: false }
+                  - name: pl
+                    label: Polish (pl)
+                    widget: object
+                    required: false
+                    collapsed: true
+                    fields:
+                      - { name: description, label: Description, widget: text, required: false }
 
   - name: settings
     label: Site Settings
@@ -1626,7 +1703,7 @@ collections:
             label: Hub Projects
             widget: list
             fields:
-              - { name: name, label: Name, widget: string }
+              - { name: title, label: Title, widget: string }
               - { name: description, label: Description, widget: text }
               - { name: url, label: URL, widget: string }
               - name: tags

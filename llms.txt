@@ -64,7 +64,7 @@ AI-guided learning layers for open-source creative tools like Godot, GIMP, and B
 
 ### Nimbus
 Status: In Development
-A civic literacy AI coach that translates complex policy, legislation, and government processes into accessible language. Built to be a research companion, not a replacement for critical thinking.
+Nimbus is RIT's civic AI — named after the founder's cockatiel — built to keep real conversations honest. It transcribes live discussions, fact-checks claims against verified sources, flags misunderstandings and escalation, and marks moments of agreement. Privacy is architectural: anonymity is the default, personalization stays on your device, and identity-sharing between participants is opt-in on both sides. Human moderators review high-impact decisions — the AI advises, never overrules.
 
 
 ## Community
