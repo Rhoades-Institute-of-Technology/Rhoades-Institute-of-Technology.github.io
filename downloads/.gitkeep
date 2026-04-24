@@ -1,0 +1,7 @@
+# Static downloads
+
+Files in this folder are served at `/downloads/<filename>` at site root.
+Use for zips, PDFs, and other binary assets you want delivered directly
+without routing through a third-party media host.
+
+Keep it small — the git repo is the storage layer.
