@@ -146,6 +146,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://rit-tech.org/blog/security-incident-august-2026</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://rit-tech.org/tvn/blog/introducing-tvn-bridge</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
